@@ -1,0 +1,16 @@
+<h1>Listing students</hq>
+<table>
+    <tr>
+        <th>Name</th>
+    </tr>
+<% for student in @student %>
+    <tr>
+        <td><%=h student.name %></td>
+        <td><%= link_to 'Показать', student %></td>
+        <td><%= link_to 'Корректировать',edit_student_path(student) %></td>
+        <td><%= link_to 'Удалить', student, :confirm => 'Уверены?',:method => :delete %></td>
+    </tr>
+<% end %>
+</table>
+<br />
+
