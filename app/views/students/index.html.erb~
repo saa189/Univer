@@ -1,4 +1,4 @@
-<h1>Список Студентов <%=h @group.numb %> </h1>
+<h1>Список Студентов группы<%=h @group.numb %> </h1>
 
 <table>
     <tr>
@@ -9,8 +9,8 @@
     <tr>
        <td><%=h student.name %></td>
        <td><%= link_to 'Показать', group_student_path(@group, student) %></td>
-       <td><%= link_to 'Изменить', edit_group_student_path(@group, student) %></td>
-       <td><%= link_to 'Удалить', group_student_path(@group, student), :confirm => 'Точно?', :method => :delete %>
+       <td><%= link_to 'Корректировать', edit_group_student_path(@group, student) %></td>
+       <td><%= link_to 'Отчислить', group_student_path(@group, student), :confirm => 'Точно?', :method => :delete %>
        </td>
       </tr>
  <% end %>

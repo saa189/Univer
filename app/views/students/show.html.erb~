@@ -3,5 +3,5 @@
  <%=h @student.name %>
  </p>
 
- <%= link_to 'Редактировать', edit_student_path(@student) %> |
- <%= link_to 'Назад', students_path %> 
+ <%= link_to 'Редактировать', edit_group_student_path(@group, @student) %> |
+ <%= link_to 'Назад', group_students_path(@group) %> 

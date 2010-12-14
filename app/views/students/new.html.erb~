@@ -3,15 +3,15 @@
   <%= f.error_messages %> 
 
   <p>
-    <%= f.label :name %><br /> 
+    <%= f.label :Фамилия_Имя_Отчество %><br /> 
     <%= f.text_field :name %> 
   </p>
  <p>
-    <%= f.label :info %><br /> 
+    <%= f.label :Краткая_информация %><br /> 
     <%= f.text_field :info %>
 </p>
   <p>
      <%= f.submit "Зачислить" %> 
   </p> 
 <% end %>
- <%= link_to 'Назад', groups_students_path(@group) %> 
+ <%= link_to 'Назад', group_students_path(@group) %> 

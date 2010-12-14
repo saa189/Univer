@@ -1,7 +1,7 @@
 <h1>Список групп</hq>
 <table>
     <tr>
-        <th>Номер</th>
+        <th>Номер группы</th>
     </tr>
 <% @groups.each do |group| %> 
     <tr>
@@ -11,4 +11,4 @@
        <td><%= link_to 'Удалить', group, :confirm => 'Точно?', :method => :delete %></td>
        </tr> <% end %> </table> 
    <br />
- <%= link_to 'Новая группа', new_group_path %> 
+<p style="color: green"><%= flash[:notice] %> <%= link_to 'Новая группа', new_group_path %> </p>

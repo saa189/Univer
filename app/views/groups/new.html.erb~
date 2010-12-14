@@ -3,10 +3,10 @@
   <%= f.error_messages %> 
 
   <p>
-    <%= f.label :numb %><br /> 
+    <%= f.label :Номер %><br /> 
     <%= f.text_field :numb %> 
   </p>
  
   <p>
      <%= f.submit "Создать" %> 
-  </p> <% end %> <%= link_to 'Назал', groups_path %> 
+  </p> <% end %> <%= link_to 'Назад', groups_path %> 
