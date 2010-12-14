@@ -1,0 +1,24 @@
+<div class="users-form">
+<% form_for(@student) do |f| %>
+    <%= f.error_messages %>
+<H2>Creat_student</H2>
+
+        <%= f.label :name %>:
+        <%= f.text_field :name %>
+
+
+        <%= f.label :group %>:
+        <%= f.text_field :group %>
+
+        <%= f.label :info %>:
+        <%= f.text_field :info %>
+
+
+        <%= f.submit "Create account", :class => "submit" %>
+
+
+<% end %>
+</div>
+</div>
+</div>
+

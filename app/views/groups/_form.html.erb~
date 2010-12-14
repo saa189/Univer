@@ -1,0 +1,9 @@
+<%= form_for(group) do |f| %> 
+  <p>
+  <b>group name</b><br /> 
+   <%= f.text_field :name %> 
+  </p>
+  <p>
+   <%= f.submit %> 
+  </p>
+ <% end %> 

@@ -1,4 +1,5 @@
 class Group < ActiveRecord::Base
  validates_presence_of :numb
+ validates_length_of :title, :minimum => 5 
  has_many :students
 end

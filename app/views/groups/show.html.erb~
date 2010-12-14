@@ -1,0 +1,22 @@
+<p>
+ <b>Номер группы:</b> 
+ <%=h @group.numb %>
+ </p>
+
+<h2>Студенты</h2> 
+<% @group.students.each do |c| %>
+ <p>
+ <b>Фамилия Имя Отчество:</b>
+ <%=h c.name %>
+ </p> 
+
+ <p>
+  <b>Student:</b> 
+   <%=h c.info %>
+   </p>
+ <% end %> 
+
+
+<%= link_to 'Редактировать группу', edit_group_path(@group) %> |
+ <%= link_to 'Назад к группе', groups_path %> |
+ <%= link_to 'Управление студентами', group_students_path(@group) %> 

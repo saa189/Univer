@@ -1,0 +1,16 @@
+<h1>Редактирование</h1>
+ <% form_for([@group, @student]) do |f| %> 
+ <%= f.error_messages %>
+ <p>
+ <%= f.label :name %><br />
+ <%= f.text_field :name %>
+ </p>
+ <p>
+ <%= f.label :info %><br />
+ <%= f.text_field :info %>
+ </p>
+ <p>
+ <%= f.submit "Обновить" %> 
+ </p>
+ <% end %> <%= link_to 'Показать', @student %> | 
+ <%= link_to 'Назад', students_path %> 

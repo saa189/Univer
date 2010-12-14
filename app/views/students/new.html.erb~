@@ -1,0 +1,17 @@
+<h1>Зачисление студента</h1>
+ <% form_for([@group,@student]) do |f| %>
+  <%= f.error_messages %> 
+
+  <p>
+    <%= f.label :name %><br /> 
+    <%= f.text_field :name %> 
+  </p>
+ <p>
+    <%= f.label :info %><br /> 
+    <%= f.text_field :info %>
+</p>
+  <p>
+     <%= f.submit "Зачислить" %> 
+  </p> 
+<% end %>
+ <%= link_to 'Назад', groups_students_path(@group) %> 
