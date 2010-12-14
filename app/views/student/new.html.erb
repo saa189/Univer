@@ -1,20 +1,17 @@
-<div class="users-form">
-<% form_for(@student) do |f| %>
-    <%= f.error_messages %>
-<H2>Creat</H2>
+<h1>Зачисление студента</h1>
+ <% form_for([@group,@student]) do |f| %>
+  <%= f.error_messages %> 
 
-        <%= f.label :name %>:
-        <%= f.text_field :name %>
-
-        <%= f.label :info %>:
-        <%= f.text_field :info %>
-
-
-        <%= f.submit "Добавить студента", :class => "submit" %>
-
-
+  <p>
+    <%= f.label :name %><br /> 
+    <%= f.text_field :name %> 
+  </p>
+ <p>
+    <%= f.label :info %><br /> 
+    <%= f.text_field :info %>
+</p>
+  <p>
+     <%= f.submit "Зачислить" %> 
+  </p> 
 <% end %>
-</div>
-</div>
-</div>
-
+ <%= link_to 'Назад', groups_students_path(@group) %> 

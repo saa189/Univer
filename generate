@@ -1,0 +1,99 @@
+Скрипт запущен Пнд 13 Дек 2010 21:35:30
+]0;sabotage@sabotage: ~/kp_test/Universabotage@sabotage:~/kp_test/Univer$ св ю[K[K[K[Kcd ..
+]0;sabotage@sabotage: ~/kp_testsabotage@sabotage:~/kp_test$ cd ..qutim &&[K[K[K[K[K[K[K[Kscript generate model group[C[C[C[C[C
+Скрипт запущен, файл - generate
+]0;sabotage@sabotage: ~/kp_testsabotage@sabotage:~/kp_test$ св [K[K[Kcd .[KU
+bash: cd: U: Нет такого файла или каталога
+]0;sabotage@sabotage: ~/kp_testsabotage@sabotage:~/kp_test$ cd Univer/
+]0;sabotage@sabotage: ~/kp_test/Universabotage@sabotage:~/kp_test/Univer$ ruby scrip/generate model gt[Kroup
+ruby: No such file or directory -- scrip/generate (LoadError)
+]0;sabotage@sabotage: ~/kp_test/Universabotage@sabotage:~/kp_test/Univer$ cd ..
+]0;sabotage@sabotage: ~/kp_testsabotage@sabotage:~/kp_test$ cd ..ruby scrip/generate model group
+ruby: No such file or directory -- scrip/generate (LoadError)
+]0;sabotage@sabotage: ~/kp_testsabotage@sabotage:~/kp_test$ cd ..[K[KUniver/
+]0;sabotage@sabotage: ~/kp_test/Universabotage@sabotage:~/kp_test/Univer$ cd Univer/ruby scrip/generate model group[C[1@t
+      exists  app/models/
+      exists  test/unit/
+      exists  test/fixtures/
+      create  app/models/group.rb
+      create  test/unit/group_test.rb
+      create  test/fixtures/groups.yml
+      exists  db/migrate
+      create  db/migrate/20101213223906_create_groups.rb
+]0;sabotage@sabotage: ~/kp_test/Universabotage@sabotage:~/kp_test/Univer$ ruby script/generate model group[C[C[C[C[C[C[C[1P group[1P group[1P group[1P group[1P groupc groupo groupn groupt groupr groupo groupl groupl groupe groupt group[1P groupr group
+      exists  app/controllers/
+      exists  app/helpers/
+      create  app/views/group
+      exists  test/functional/
+      create  app/controllers/group_controller.rb
+      create  test/functional/group_controller_test.rb
+      create  app/helpers/group_helper.rb
+]0;sabotage@sabotage: ~/kp_test/Universabotage@sabotage:~/kp_test/Univer$ ruby script/generate controller group[5Pmodel[C[C[C[C[C[Ccd Univer/[Kruby scrip/generate model groupcd ..[Kruby scrip/generate model groupcd Univer/[K[Kqutim &&sudo apt-get install qutimchmod -R 755 /usr/share/stardict/dic/staardict-comn_sdict02_eng_rus_full-2.4.2/[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ceng_rus_comp/[K[A]0;sabotage@sabotage: ~/kp_test/Universabotage@sabotage:~/kp_test/Univer$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cp -r /home/sabotage/stardict-comn_sdictt02_eng_rus_full-2.4.2/ usr/share/stardict/dic/[A~/eng_rus_comp/ usr/share/stardict/dic/[K[C[C [K[A]0;sabotage@sabotage: ~/kp_test/Universabotage@sabotage:~/kp_test/Univer$ ls[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccd ..[3Plscd .. sudo cp -r eng_rus_comp/ /home/sabotage/.starrdict/dic/ [A]0;sabotage@sabotage: ~/kp_test/Universabotage@sabotage:~/kp_test/Univer$ [29Prake db:migrate
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccd kp_test/Univer/[3Prake db:migrate
+(in /home/sabotage/kp_test/Univer)
+==  CreateGroups: migrating ===================================================
+-- create_table(:groups)
+   -> 0.0056s
+==  CreateGroups: migrated (0.0059s) ==========================================
+
+]0;sabotage@sabotage: ~/kp_test/Universabotage@sabotage:~/kp_test/Univer$ rake db:migrate
+(in /home/sabotage/kp_test/Univer)
+]0;sabotage@sabotage: ~/kp_test/Universabotage@sabotage:~/kp_test/Univer$ rake db:migrate
+(in /home/sabotage/kp_test/Univer)
+]0;sabotage@sabotage: ~/kp_test/Universabotage@sabotage:~/kp_test/Univer$ rake db:migrate
+(in /home/sabotage/kp_test/Univer)
+]0;sabotage@sabotage: ~/kp_test/Universabotage@sabotage:~/kp_test/Univer$ rake db:migrate
+(in /home/sabotage/kp_test/Univer)
+]0;sabotage@sabotage: ~/kp_test/Universabotage@sabotage:~/kp_test/Univer$ rake db:migrate
+(in /home/sabotage/kp_test/Univer)
+]0;sabotage@sabotage: ~/kp_test/Universabotage@sabotage:~/kp_test/Univer$ rake db:migrate
+(in /home/sabotage/kp_test/Univer)
+]0;sabotage@sabotage: ~/kp_test/Universabotage@sabotage:~/kp_test/Univer$ rake db:migrate
+(in /home/sabotage/kp_test/Univer)
+]0;sabotage@sabotage: ~/kp_test/Universabotage@sabotage:~/kp_test/Univer$ rake db:migrate
+(in /home/sabotage/kp_test/Univer)
+]0;sabotage@sabotage: ~/kp_test/Universabotage@sabotage:~/kp_test/Univer$ rake db:migrate
+(in /home/sabotage/kp_test/Univer)
+]0;sabotage@sabotage: ~/kp_test/Universabotage@sabotage:~/kp_test/Univer$ rake db:migrate
+(in /home/sabotage/kp_test/Univer)
+]0;sabotage@sabotage: ~/kp_test/Universabotage@sabotage:~/kp_test/Univer$ rake db:migrate
+(in /home/sabotage/kp_test/Univer)
+]0;sabotage@sabotage: ~/kp_test/Universabotage@sabotage:~/kp_test/Univer$ rake db:migrate
+(in /home/sabotage/kp_test/Univer)
+]0;sabotage@sabotage: ~/kp_test/Universabotage@sabotage:~/kp_test/Univer$ rake db:migrate
+(in /home/sabotage/kp_test/Univer)
+]0;sabotage@sabotage: ~/kp_test/Universabotage@sabotage:~/kp_test/Univer$ rake db:migrate
+(in /home/sabotage/kp_test/Univer)
+]0;sabotage@sabotage: ~/kp_test/Universabotage@sabotage:~/kp_test/Univer$ rake db:migrate
+(in /home/sabotage/kp_test/Univer)
+]0;sabotage@sabotage: ~/kp_test/Universabotage@sabotage:~/kp_test/Univer$ rake db:migrate
+(in /home/sabotage/kp_test/Univer)
+]0;sabotage@sabotage: ~/kp_test/Universabotage@sabotage:~/kp_test/Univer$ rake db:migrate
+(in /home/sabotage/kp_test/Univer)
+]0;sabotage@sabotage: ~/kp_test/Universabotage@sabotage:~/kp_test/Univer$ rake db:migrate
+(in /home/sabotage/kp_test/Univer)
+]0;sabotage@sabotage: ~/kp_test/Universabotage@sabotage:~/kp_test/Univer$ rake db:migrate
+(in /home/sabotage/kp_test/Univer)
+]0;sabotage@sabotage: ~/kp_test/Universabotage@sabotage:~/kp_test/Univer$ rake db:migrate
+(in /home/sabotage/kp_test/Univer)
+]0;sabotage@sabotage: ~/kp_test/Universabotage@sabotage:~/kp_test/Univer$ rake db:migrate
+(in /home/sabotage/kp_test/Univer)
+]0;sabotage@sabotage: ~/kp_test/Universabotage@sabotage:~/kp_test/Univer$ rake db:migrate
+(in /home/sabotage/kp_test/Univer)
+]0;sabotage@sabotage: ~/kp_test/Universabotage@sabotage:~/kp_test/Univer$ rake db:migrate
+(in /home/sabotage/kp_test/Univer)
+]0;sabotage@sabotage: ~/kp_test/Universabotage@sabotage:~/kp_test/Univer$ rake db:migrate
+(in /home/sabotage/kp_test/Univer)
+]0;sabotage@sabotage: ~/kp_test/Universabotage@sabotage:~/kp_test/Univer$ rake db:migrate
+(in /home/sabotage/kp_test/Univer)
+]0;sabotage@sabotage: ~/kp_test/Universabotage@sabotage:~/kp_test/Univer$ rake db:migrate
+(in /home/sabotage/kp_test/Univer)
+]0;sabotage@sabotage: ~/kp_test/Universabotage@sabotage:~/kp_test/Univer$ rake db:migrate
+(in /home/sabotage/kp_test/Univer)
+]0;sabotage@sabotage: ~/kp_test/Universabotage@sabotage:~/kp_test/Univer$ rake db:migrate
+(in /home/sabotage/kp_test/Univer)
+]0;sabotage@sabotage: ~/kp_test/Universabotage@sabotage:~/kp_test/Univer$ rake db:migrate
+(in /home/sabotage/kp_test/Univer)
+]0;sabotage@sabotage: ~/kp_test/Universabotage@sabotage:~/kp_test/Un

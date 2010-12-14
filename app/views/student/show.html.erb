@@ -1,0 +1,7 @@
+<p>
+ <b>Студент:</b> 
+ <%=h @student.name %>
+ </p>
+
+ <%= link_to 'Редактировать', edit_group_student_path(@group, @student) %> |
+ <%= link_to 'Назад', group_students_path(@group) %> 

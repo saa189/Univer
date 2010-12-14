@@ -9,13 +9,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101211211141) do
+ActiveRecord::Schema.define(:version => 20101213223906) do
+
+  create_table "groups", :force => true do |t|
+    t.string   "numb"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "students", :force => true do |t|
     t.string   "name"
-    t.string   "group"
-    t.string   "fac"
     t.string   "info"
+    t.integer  "group_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
