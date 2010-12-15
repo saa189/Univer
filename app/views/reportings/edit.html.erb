@@ -1,0 +1,17 @@
+<h1>Редактирование</h1>
+
+<% form_for([@discipline, @reporting]) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :'Вид отчетности' %><br />
+    <%= f.text_field :rtype %>
+  </p>
+
+  <p>
+    <%= f.submit 'Сохранить изменения' %>
+  </p>
+<% end %>
+
+<%= link_to 'Показать', discipline_reporting_path (@discipline, @reporting) %> |
+<%= link_to 'Назад', discipline_reportings_path (@discipline) %>

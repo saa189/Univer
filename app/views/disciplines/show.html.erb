@@ -1,0 +1,32 @@
+<p>
+  <b>Дисциплина:</b>
+  <%=h @discipline.name %>
+</p>
+
+ <p>
+<b>Вид отчетности:</b>
+<% @discipline.reportings.each do |c| %>
+
+ <%=h c.rtype %>
+ <% end %> 
+ </p> 
+
+
+<b>Преподаватели:</b>
+<% @discipline.lecturers.each do |l| %>
+<p>
+ <%=h l.surname %>
+ <%=h l.name %>
+ <%=h l.lastname %>
+ </p> 
+ <% end %> 
+
+
+
+<p>
+</p>
+<%= link_to 'Редактировать', edit_discipline_path(@discipline) %> |
+<%= link_to 'Назад', disciplines_path %> |
+ <%= link_to 'Отчетность', discipline_reportings_path(@discipline) %> |
+ <%= link_to 'Преподаватели', discipline_lecturers_path(@discipline) %>
+

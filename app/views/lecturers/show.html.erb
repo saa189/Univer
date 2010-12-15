@@ -1,0 +1,17 @@
+
+<p>
+  <b>Фамилия</b>
+  <%=h @lecturer.surname %>
+</p>
+<p>
+  <b>Имя</b>
+  <%=h @lecturer.name %>
+</p>
+<p>
+  <b>Отчество</b>
+  <%=h @lecturer.lastname %>
+</p>
+
+
+<%= link_to 'Редактировать', edit_discipline_lecturer_path(@discipline, @lecturer) %> |
+<%= link_to 'Назад', discipline_lecturers_path(@discipline) %>

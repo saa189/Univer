@@ -1,0 +1,8 @@
+<p>
+  <b>Вид отчетности:</b>
+  <%=h @reporting.rtype %>
+</p>
+
+
+<%= link_to 'Редактировать', edit_discipline_reporting_path(@discipline, @reporting) %> |
+<%= link_to 'Назад', discipline_reportings_path(@discipline) %>

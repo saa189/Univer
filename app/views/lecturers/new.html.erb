@@ -1,0 +1,24 @@
+<h1>Преподаватель</h1>
+
+<% form_for([@discipline, @lecturer]) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :Фамилия %><br />
+    <%= f.text_field :surname %>
+  </p>
+  <p>
+    <%= f.label :Имя %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :Отчество %><br />
+    <%= f.text_field :lastname %>
+  </p>
+
+  <p>
+    <%= f.submit 'Создать' %>
+  </p>
+<% end %>
+
+<%= link_to 'Назад', discipline_lecturers_path (@discipline) %>

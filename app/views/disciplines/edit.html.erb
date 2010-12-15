@@ -1,0 +1,18 @@
+<h1>Редактирование</h1>
+
+<% form_for(@discipline) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :'Название дисциплины' %><br />
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.submit 'Сохранить изменения' %>
+  </p>
+
+<% end %>
+
+<%= link_to 'Показать', @discipline %> |
+<%= link_to 'Назад', disciplines_path %>

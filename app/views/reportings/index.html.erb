@@ -1,0 +1,17 @@
+<h1>Виды отчетности по дисциплине <%=h @discipline.name %></h1>
+
+<table>
+
+<% for reporting in @reportings %>
+  <tr>
+    <td><%=h reporting.rtype %></td>
+    <td><%= link_to 'Показать', discipline_path (@discipline)  %></td>
+    <td><%= link_to 'Редактировать', edit_discipline_reporting_path (@discipline, reporting) %></td>
+    <td><%= link_to 'Удалить', discipline_reporting_path (@discipline, reporting), :confirm => 'Вы уверены?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+ <%= link_to 'Добавить', new_discipline_reporting_path(@discipline) %> |
+<%= link_to 'Назад к списку дисциплин', disciplines_path %> 
