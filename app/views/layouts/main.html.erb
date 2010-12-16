@@ -1,4 +1,3 @@
-
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="ru">
@@ -9,7 +8,29 @@
 <meta name="description" lang="ru" content="<%= $description %>" />
 <%= stylesheet_link_tag 'scaffold' %>
 </head>
+<body>
+<table width="100%" border="0">
+<tr align="center">
+<td colspan="3">
+<h1>Университет</h1>
+</td>
+</tr>
+<tr>
+<td align="left">
+<h2>
+ <%= link_to 'Группы', groups_path %></h2> 
+</td>
+<td align="center">
+<p style="color: green"><%= flash[:notice] %></p>
+<%= yield %>
+</td>
+<td align="right>
+3
+</td>
+</tr>
+</table>
 
+</body>
+ </html>
 
-<h2><%= link_to "Группы", groups_path %></h2> 
 

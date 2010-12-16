@@ -3,6 +3,6 @@
   <%=h @reporting.rtype %>
 </p>
 
-
-<%= link_to 'Редактировать', edit_discipline_reporting_path(@discipline, @reporting) %> |
-<%= link_to 'Назад', discipline_reportings_path(@discipline) %>
+   <%= link_to 'Показать', group_reportings_path (@group) %> |
+<%= link_to 'Редактировать', edit_group_reporting_path(@group, @reporting) %> |
+<%= link_to 'Назад', group_reportings_path(@group) %>

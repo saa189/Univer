@@ -2,6 +2,7 @@ class CreateDisciplines < ActiveRecord::Migration
   def self.up
     create_table :disciplines do |t|
       t.column :name, :text
+      t.column :group_id, :integer
 
       t.timestamps
     end

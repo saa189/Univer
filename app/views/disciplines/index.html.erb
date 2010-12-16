@@ -1,20 +1,23 @@
-<h1>Список дисциплин</h1>
+<h1>Список дисциплин группы <%=h @group.numb %></h1>
 
 <table>
   <tr>
     <th>Название</th>
   </tr>
 
-<% @disciplines.each do |discipline| %>
+<% for discipline in @disciplines %>
   <tr>
     <td><%=h discipline.name %></td>
-    <td><%= link_to 'Показать', discipline %></td>
-    <td><%= link_to 'Редактировать', edit_discipline_path(discipline) %></td>
-    <td><%= link_to 'Удалить', discipline, :confirm => 'Вы уверены?', :method => :delete %></td>
+    <td><%= link_to 'Показать', group_discipline_path (@group, discipline) %></td>
+    <td><%= link_to 'Редактировать', edit_group_discipline_path (@group, discipline) %></td>
+    <td><%= link_to 'Удалить', group_discipline_path (@group, discipline), :confirm => 'Вы уверены?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
-
-<%= link_to 'Новая дисциплина', new_discipline_path %>
+ <%= link_to 'Преподаватели', group_lecturers_path(@group) %> |
+ <%= link_to 'Отчетность', group_reportings_path(@group) %> 
+<br />
+<%= link_to 'Новая дисциплина', new_group_discipline_path (@group) %> |
+<%= link_to 'Назад к списку групп', groups_path %>

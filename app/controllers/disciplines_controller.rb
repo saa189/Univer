@@ -2,88 +2,68 @@ class DisciplinesController < ApplicationController
   # GET /disciplines
   # GET /disciplines.xml
   def index
-    @disciplines = Discipline.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @disciplines }
-    end
+    @group = Group.find(params[:group_id])
+    @disciplines = @group.disciplines
   end
 
   # GET /disciplines/1
   # GET /disciplines/1.xml
   def show
-    @discipline = Discipline.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @discipline }
-    end
+    @group = Group.find(params[:group_id])
+    @discipline = @group.disciplines.find(params[:id])
   end
 
   # GET /disciplines/new
   # GET /disciplines/new.xml
   def new
-    @discipline = Discipline.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @discipline }
-    end
+    @group = Group.find(params[:group_id])
+    @discipline = @group.disciplines.build
   end
 
   # GET /disciplines/1/edit
   def edit
-    @discipline = Discipline.find(params[:id])
+    @group = Group.find(params[:group_id])
+    @discipline = @group.disciplines.find(params[:id])
+
+    
   end
 
   # POST /disciplines
   # POST /disciplines.xml
   def create
-    @discipline = Discipline.new(params[:discipline])
+    @group = Group.find(params[:group_id])
+    @discipline = @group.disciplines.build(params[:discipline])
 
-    respond_to do |format|
       if @discipline.save
-        flash[:notice] = 'Discipline was successfully created.'
-        format.html { redirect_to(@discipline) }
-        format.xml  { render :xml => @discipline, :status => :created, :location => @discipline }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @discipline.errors, :status => :unprocessable_entity }
+        redirect_to group_discipline_url(@group, @discipline)
+    else
+      render :action => "new" 
       end
-    end
+
   end
 
   # PUT /disciplines/1
   # PUT /disciplines/1.xml
   def update
+    @group = Group.find(params[:group_id])
     @discipline = Discipline.find(params[:id])
-
-    respond_to do |format|
-      if @discipline.update_attributes(params[:discipline])
-        flash[:notice] = 'Discipline was successfully updated.'
-        format.html { redirect_to(@discipline) }
-        format.xml  { head :ok }
-      else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @discipline.errors, :status => :unprocessable_entity }
-      end
-    end
-  end
-
-def list
-    @reporting = Discipline.find(:all)
+     if @discipline.update_attributes(params[:discipline])
+        redirect_to group_discipline_url(@group, @discipline)
+     else
+        render :action => "edit"
+     end
   end
 
   # DELETE /disciplines/1
   # DELETE /disciplines/1.xml
   def destroy
+    @group = Group.find(params[:group_id])
     @discipline = Discipline.find(params[:id])
     @discipline.destroy
 
     respond_to do |format|
-      format.html { redirect_to(disciplines_url) }
+      format.html { redirect_to group_disciplines_path(@group)  }
       format.xml  { head :ok }
     end
-  end
+ end
 end

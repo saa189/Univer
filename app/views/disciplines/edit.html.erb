@@ -1,6 +1,6 @@
 <h1>Редактирование</h1>
 
-<% form_for(@discipline) do |f| %>
+<% form_for([@group, @discipline]) do |f| %>
   <%= f.error_messages %>
 
   <p>
@@ -14,5 +14,5 @@
 
 <% end %>
 
-<%= link_to 'Показать', @discipline %> |
-<%= link_to 'Назад', disciplines_path %>
+<%= link_to 'Показать', group_discipline_path (@group, @discipline) %> |
+<%= link_to 'Назад', group_disciplines_path (@group) %>

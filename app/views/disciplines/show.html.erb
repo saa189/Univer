@@ -1,23 +1,48 @@
+<h1>Группа <%=h @group.numb %></h1>
 <p>
+
   <b>Дисциплина:</b>
   <%=h @discipline.name %>
+
 </p>
-
- <p>
+<p>
 <b>Вид отчетности:</b>
-<% @discipline.reportings.each do |c| %>
-
+<% @group.reportings.each do |c| %>
+<% if c.discipline_id == @discipline.id %>
  <%=h c.rtype %>
+<% end %>
  <% end %> 
  </p> 
 
 
 <b>Преподаватели:</b>
-<% @discipline.lecturers.each do |l| %>
+<% @group.lecturers.each do |l| %>
 <p>
+<% if l.discipline_id == @discipline.id %>
  <%=h l.surname %>
  <%=h l.name %>
  <%=h l.lastname %>
+   <%if l.ltype == '1' %>
+      <% l.ltype = ' - лекции' %>
+      <%=h l.ltype %>
+   <% elsif l.stype == '1' %>
+      <% l.stype = ' - семинары' %>
+      <% s = 0 %>
+      <%=h l.stype %>
+   <% elsif l.labtype == '1' %>
+      <% l.labtype = ' - лабораторные' %>
+      <% lab = 0 %>
+      <%=h l.labtype %>
+   <% end %>
+   <%if l.stype == '1' && s != 0 %>
+      <% l.stype = '  семинары' %>
+      <%=h l.stype %>
+   <% end %>
+   <%if l.labtype == '1' && lab != 0 %>
+      <% l.labtype = '  лабораторные' %>
+      <%=h l.labtype %>
+   <% end %>
+<% end %>
  </p> 
  <% end %> 
 
@@ -25,8 +50,7 @@
 
 <p>
 </p>
-<%= link_to 'Редактировать', edit_discipline_path(@discipline) %> |
-<%= link_to 'Назад', disciplines_path %> |
- <%= link_to 'Отчетность', discipline_reportings_path(@discipline) %> |
- <%= link_to 'Преподаватели', discipline_lecturers_path(@discipline) %>
+<%= link_to 'Назад', group_disciplines_path (@group) %> 
+
+
 

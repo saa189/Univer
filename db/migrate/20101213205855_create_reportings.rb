@@ -3,7 +3,7 @@ class CreateReportings < ActiveRecord::Migration
     create_table :reportings do |t|
       t.column :rtype, :text 
       t.column :discipline_id, :integer
-
+      t.column :group_id, :integer
       t.timestamps
     end
 

@@ -4,8 +4,11 @@ class CreateLecturers < ActiveRecord::Migration
       t.column :surname, :text
       t.column :name, :text
       t.column :lastname, :text
+      t.column :ltype, :text
+      t.column :stype, :text
+      t.column :labtype, :text
       t.column :discipline_id, :integer
-
+      t.column :group_id, :integer
       t.timestamps
     end
   end

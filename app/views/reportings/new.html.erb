@@ -1,16 +1,19 @@
 <h1>Новая отчетность</h1>
 
-<% form_for([@discipline, @reporting]) do |f| %>
+<% form_for([@group, @reporting]) do |f| %>
   <%= f.error_messages %>
 
   <p>
     <%= f.label :Вид %><br />
     <%= f.text_field :rtype %>
   </p>
-
+  <p>
+<%= f.label :Дисциплина %><br />
+  <%= disciplines_select('reporting[discipline_id]', @group.id) %>
+  </p>
   <p>
     <%= f.submit 'Создать' %>
   </p>
 <% end %>
 
-<%= link_to 'Назад', discipline_reportings_path (@discipline) %>
+<%= link_to 'Назад', group_reportings_path (@group) %>

@@ -1,6 +1,6 @@
 <h1>Редактирование</h1>
 
-<% form_for([@discipline, @lecturer]) do |f| %>
+<% form_for([@group, @lecturer]) do |f| %>
   <%= f.error_messages %>
 
   <p>
@@ -15,12 +15,27 @@
     <%= f.label :Отчество %><br />
     <%= f.text_field :lastname %>
   </p>
-
+  <p>
+<%= f.check_box :ltype %> 
+<%= label_tag(:ltype, "лекции") %> 
+  </p>
+  <p>
+<%= f.check_box :stype %> 
+<%= label_tag(:stype, "семинары") %> 
+  </p>
+  <p>
+<%= f.check_box :labtype %> 
+<%= label_tag(:labtype, "лабораторные") %> 
+  </p>
+  <p>
+    <%= f.label :Дисциплина %><br />
+    <%= disciplines_select('lecturer[discipline_id]', @group.id) %>
+  </p>
   <p>
     <%= f.submit 'Сохранить изменения' %>
   </p>
 <% end %>
 
 
-<%= link_to 'Показать', discipline_lecturer_path (@discipline, @lecturer) %> |
-<%= link_to 'Назад', discipline_lecturers_path (@discipline) %>
+<%= link_to 'Показать', group_lecturer_path (@group, @lecturer) %> |
+<%= link_to 'Назад', group_lecturers_path (@group) %>

@@ -1,20 +1,44 @@
-<h1>Преподаватель(и) по дисциплине <%=h @discipline.name %></h1>
+<h1>Преподаватель(и)</h1>
 
 <table>
 
 <% for lecturer in @lecturers %>
   <tr>
+    
     <td><%=h lecturer.surname %></td>
     <td><%=h lecturer.name %></td>
     <td><%=h lecturer.lastname %></td>
-    <td><%= link_to 'Показать', discipline_path (@discipline)  %></td>
-    <td><%= link_to 'Редактировать', edit_discipline_lecturer_path (@discipline, lecturer) %></td>
-    <td><%= link_to 'Удалить', discipline_lecturer_path (@discipline, lecturer), :confirm => 'Вы уверены?', :method => :delete %></td>
+
+<td>
+  <%if lecturer.ltype == '1' %>
+  <% lecturer.ltype = '  лекции' %>
+  <%=h lecturer.ltype %>
+  <% end %>
+</td>
+
+<td>
+  <%if lecturer.stype == '1' %>
+  <% lecturer.stype = '  семинары' %>
+  <%=h lecturer.stype %>
+  <% end %>
+</td>
+
+<td>
+  <%if lecturer.labtype == '1' %>
+  <% lecturer.labtype = '  лабораторные' %>
+  <%=h lecturer.labtype %>
+  <% end %>
+</td>
+
+<td><%= link_to 'Показать', group_lecturer_path (@group, lecturer)  %> </td>
+    <td><%= link_to 'Редактировать', edit_group_lecturer_path (@group, lecturer) %></td>
+    <td><%= link_to 'Удалить', group_lecturer_path (@group, lecturer), :confirm => 'Вы уверены?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
- <%= link_to 'Добавить', new_discipline_lecturer_path(@discipline) %> |
-<%= link_to 'Назад к списку дисциплин', disciplines_path %> 
+
+ <%= link_to 'Добавить', new_group_lecturer_path(@group) %> |
+<%= link_to 'Назад к списку групп', groups_path  %> 
 
