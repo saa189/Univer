@@ -4,9 +4,16 @@
  </p>
 
 <p>
- <b>Краткая информация:</b> 
+ <b>Номер паспорта:</b> 
  <%=h @student.info %>
  </p>
-
+<p>
+ <b>Дата рождения:</b> 
+ <%=h @student.data %>
+ </p>
+<p>
+ <b>Место рождения:</b> 
+ <%=h @student.from %>
+ </p>
  <%= link_to 'Редактировать', edit_group_student_path(@group, @student) %> |
  <%= link_to 'Назад', group_students_path(@group) %> 

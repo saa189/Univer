@@ -7,8 +7,7 @@
 
 <% for student in @students %>  
     <tr>
-       <td><%=h student.name %></td>
-       <td><%= link_to 'Показать', group_student_path(@group, student) %></td>
+       <td><%= link_to student.name, group_student_path(@group, student) %></td>
        <td><%= link_to 'Корректировать', edit_group_student_path(@group, student) %></td>
        <td><%= link_to 'Отчислить', group_student_path(@group, student), :confirm => 'Точно?', :method => :delete %>
        </td>

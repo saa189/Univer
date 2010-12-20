@@ -3,5 +3,11 @@
  <%=h @student.name %>
  </p>
 
+<p>
+ <b>Номер паспорта:</b> 
+ <%=h @student.info %>
+ </p>
+<p>
+
  <%= link_to 'Редактировать', edit_group_student_path(@group, @student) %> |
  <%= link_to 'Назад', group_students_path(@group) %> 

@@ -1,7 +1,7 @@
 <div class="users-form">
 <% form_for(@student) do |f| %>
     <%= f.error_messages %>
-<H2>Creat_student</H2>
+<H2>Creat_</H2>
 
         <%= f.label :name %>:
         <%= f.text_field :name %>
@@ -14,7 +14,7 @@
         <%= f.text_field :info %>
 
 
-        <%= f.submit "Create account", :class => "submit" %>
+        <%= f.submit "Добавить студента", :class => "submit" %>
 
 
 <% end %>

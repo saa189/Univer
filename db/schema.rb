@@ -48,6 +48,8 @@ ActiveRecord::Schema.define(:version => 20101215132242) do
   create_table "students", :force => true do |t|
     t.string   "name"
     t.string   "info"
+    t.string   "data"
+    t.string   "from"
     t.integer  "group_id"
     t.datetime "created_at"
     t.datetime "updated_at"

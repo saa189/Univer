@@ -7,9 +7,10 @@
     <%= f.text_field :name %> 
   </p>
  <p>
-    <%= f.label :Краткая_информация %><br /> 
+    <%= f.label :Номер_паспорта %><br /> 
     <%= f.text_field :info %>
 </p>
+
   <p>
      <%= f.submit "Зачислить" %> 
   </p> 
