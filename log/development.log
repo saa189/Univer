@@ -13870,3 +13870,100 @@ Processing StudentsController#show (for 127.0.0.1 at 2010-12-20 17:55:22) [GET]
   [4;35;1mStudent Load (0.7ms)[0m   [0mSELECT * FROM "students" WHERE ("students"."id" = 3 AND ("students".group_id = 2)) [0m
 Rendering students/show
 Completed in 32ms (View: 5, DB: 1) | 200 OK [http://localhost/groups/2/students/3]
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2010-12-20 17:57:35) [GET]
+  Parameters: {"group_id"=>"2"}
+  [4;36;1mGroup Load (0.5ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups"."id" = 2) [0m
+Rendering students/index
+  [4;35;1mStudent Load (0.5ms)[0m   [0mSELECT * FROM "students" WHERE ("students".group_id = 2) [0m
+Completed in 33ms (View: 13, DB: 1) | 200 OK [http://localhost/groups/2/students]
+
+
+Processing GroupsController#show (for 127.0.0.1 at 2010-12-20 17:57:40) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mGroup Load (0.6ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups"."id" = 2) [0m
+Rendering groups/show
+  [4;35;1mStudent Load (0.6ms)[0m   [0mSELECT * FROM "students" WHERE ("students".group_id = 2) [0m
+Completed in 35ms (View: 16, DB: 1) | 200 OK [http://localhost/groups/2]
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2010-12-20 17:57:45) [GET]
+  [4;36;1mGroup Load (1.1ms)[0m   [0;1mSELECT * FROM "groups" [0m
+Rendering groups/index
+Completed in 37ms (View: 17, DB: 1) | 200 OK [http://localhost/groups]
+
+
+Processing GroupsController#show (for 127.0.0.1 at 2010-12-20 17:57:48) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mGroup Load (0.5ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups"."id" = 2) [0m
+Rendering groups/show
+  [4;36;1mStudent Load (0.5ms)[0m   [0;1mSELECT * FROM "students" WHERE ("students".group_id = 2) [0m
+Completed in 35ms (View: 15, DB: 1) | 200 OK [http://localhost/groups/2]
+
+
+Processing GroupsController#edit (for 127.0.0.1 at 2010-12-20 17:57:52) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mGroup Load (0.8ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups"."id" = 2) [0m
+Rendering groups/edit
+Completed in 51ms (View: 19, DB: 1) | 200 OK [http://localhost/groups/2/edit]
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2010-12-20 17:57:56) [GET]
+  [4;36;1mGroup Load (1.7ms)[0m   [0;1mSELECT * FROM "groups" [0m
+Rendering groups/index
+Completed in 61ms (View: 32, DB: 2) | 200 OK [http://localhost/groups]
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2010-12-20 18:21:28) [GET]
+  [4;35;1mGroup Load (1.0ms)[0m   [0mSELECT * FROM "groups" [0m
+Rendering groups/index
+Completed in 37ms (View: 15, DB: 1) | 200 OK [http://localhost/groups]
+
+
+Processing GroupsController#show (for 127.0.0.1 at 2010-12-20 18:21:30) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mGroup Load (0.6ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups"."id" = 2) [0m
+Rendering groups/show
+  [4;35;1mStudent Load (0.5ms)[0m   [0mSELECT * FROM "students" WHERE ("students".group_id = 2) [0m
+Completed in 35ms (View: 18, DB: 1) | 200 OK [http://localhost/groups/2]
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2010-12-20 18:21:40) [GET]
+  Parameters: {"group_id"=>"2"}
+  [4;36;1mGroup Load (0.5ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups"."id" = 2) [0m
+Rendering students/index
+  [4;35;1mStudent Load (0.5ms)[0m   [0mSELECT * FROM "students" WHERE ("students".group_id = 2) [0m
+Completed in 43ms (View: 15, DB: 1) | 200 OK [http://localhost/groups/2/students]
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2010-12-20 18:21:44) [GET]
+  Parameters: {"group_id"=>"2"}
+  [4;36;1mGroup Load (0.4ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups"."id" = 2) [0m
+Rendering students/new
+Completed in 34ms (View: 8, DB: 0) | 200 OK [http://localhost/groups/2/students/new]
+
+
+Processing StudentsController#create (for 127.0.0.1 at 2010-12-20 18:22:29) [POST]
+  Parameters: {"commit"=>"Зачислить", "authenticity_token"=>"EpFzk13FyqXEw+pyJYOrGlOr8+jfxWwIwiIa/iW/Pqc=", "group_id"=>"2", "student"=>{"name"=>"Галдина Ирина Николаевна", "data"=>"24.01.1991", "from"=>"г. Москва", "info"=>"43218765"}}
+  [4;35;1mGroup Load (0.7ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups"."id" = 2) [0m
+  [4;36;1mStudent Load (0.7ms)[0m   [0;1mSELECT "students".id FROM "students" WHERE ("students"."info" = '43218765') LIMIT 1[0m
+Rendering students/new
+Completed in 87ms (View: 25, DB: 1) | 200 OK [http://localhost/groups/2/students]
+
+
+Processing StudentsController#create (for 127.0.0.1 at 2010-12-20 18:22:44) [POST]
+  Parameters: {"commit"=>"Зачислить", "authenticity_token"=>"EpFzk13FyqXEw+pyJYOrGlOr8+jfxWwIwiIa/iW/Pqc=", "group_id"=>"2", "student"=>{"name"=>"Галдина Ирина Николаевна", "data"=>"24.01.1991", "from"=>"г. Москва", "info"=>"41236547"}}
+  [4;35;1mGroup Load (0.5ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups"."id" = 2) [0m
+  [4;36;1mStudent Load (0.2ms)[0m   [0;1mSELECT "students".id FROM "students" WHERE ("students"."info" = '41236547') LIMIT 1[0m
+  [4;35;1mStudent Create (0.5ms)[0m   [0mINSERT INTO "students" ("name", "data", "created_at", "from", "updated_at", "info", "group_id") VALUES('Галдина Ирина Николаевна', '24.01.1991', '2010-12-20 19:22:44', 'г. Москва', '2010-12-20 19:22:44', '41236547', 2)[0m
+Redirected to http://localhost:3000/groups/2/students/5
+Completed in 40ms (DB: 1) | 302 Found [http://localhost/groups/2/students]
+
+
+Processing StudentsController#show (for 127.0.0.1 at 2010-12-20 18:22:44) [GET]
+  Parameters: {"group_id"=>"2", "id"=>"5"}
+  [4;36;1mGroup Load (0.6ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups"."id" = 2) [0m
+  [4;35;1mStudent Load (0.7ms)[0m   [0mSELECT * FROM "students" WHERE ("students"."id" = 5 AND ("students".group_id = 2)) [0m
+Rendering students/show
+Completed in 33ms (View: 5, DB: 1) | 200 OK [http://localhost/groups/2/students/5]
