@@ -5,8 +5,6 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :disciplines, :has_many => :lecturers
   map.resources :groups, :has_many => :students 
   map.resources :groups, :has_many => :disciplines
-  map.resources :groups, :has_many => :reportings 
-  map.resources :groups, :has_many => :lecturers 
 
   # The priority is based upon order of creation: first created -> highest priority.
 

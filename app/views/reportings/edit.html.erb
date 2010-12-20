@@ -1,6 +1,6 @@
 <h1>Редактирование</h1>
 
-<% form_for([@group, @reporting]) do |f| %>
+<% form_for([@discipline, @reporting]) do |f| %>
   <%= f.error_messages %>
 
   <p>
@@ -8,13 +8,12 @@
     <%= f.text_field :rtype %>
   </p>
   <p>
-<%= f.label :Дисциплина %><br />
-  <%= disciplines_select('reporting[discipline_id]', @group.id) %>
+<% @reporting.discipline_id == @discipline.id %>
   </p>
   <p>
     <%= f.submit 'Сохранить изменения' %>
   </p>
 <% end %>
 
-<%= link_to 'Показать', group_reporting_path (@group, @reporting) %> |
-<%= link_to 'Назад', group_reportings_path (@group) %>
+<%= link_to 'Показать', discipline_reporting_path (@discipline, @reporting) %> |
+<%= link_to 'Назад', discipline_reportings_path (@discipline) %>

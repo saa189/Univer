@@ -6,18 +6,17 @@
 <h2>Студенты</h2> 
 <% @group.students.each do |c| %>
  <p>
-<b> <%=h c.id %>)</b> 
+ <b>Фамилия Имя Отчество:</b>
  <%=h c.name %>
  </p> 
 
-
+ <p>
+  <b>Краткая информация:</b> 
+   <%=h c.info %>
+   </p>
  <% end %> 
 
 
-
 <%= link_to 'Редактировать группу', edit_group_path(@group) %> |
- <%= link_to 'Назад к списку групп', groups_path %> |
- <%= link_to 'Управление студентами', group_students_path(@group) %>
-<p> 
- <%= link_to 'Дисциплины', group_disciplines_path (@group) %> 
-</p>
+ <%= link_to 'Назад к группе', groups_path %> |
+ <%= link_to 'Управление студентами', group_students_path(@group) %> 

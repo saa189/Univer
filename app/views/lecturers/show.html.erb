@@ -1,18 +1,21 @@
 
 <p>
-  <b>Фамилия</b>
+  <b>Фамилия: </b>
   <%=h @lecturer.surname %>
 </p>
 <p>
-  <b>Имя</b>
+  <b>Имя: </b>
   <%=h @lecturer.name %>
 </p>
 <p>
-  <b>Отчество</b>
+  <b>Отчество: </b>
   <%=h @lecturer.lastname %>
 </p>
+<p>
+  <b>Предмет: </b>
+  <%=h @discipline.name %>
 
+</p>
 
-<%= link_to 'Показать', group_lecturers_path(@group) %> |
-<%= link_to 'Редактировать', edit_group_lecturer_path(@group, @lecturer) %> |
-<%= link_to 'Назад', group_lecturers_path(@group) %>
+<%= link_to 'Редактировать', edit_discipline_lecturer_path(@discipline, @lecturer) %> |
+<%= link_to 'Назад', discipline_lecturers_path(@discipline) %>

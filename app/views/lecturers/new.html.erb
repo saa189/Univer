@@ -1,6 +1,6 @@
 <h1>Преподаватель</h1>
 
-<% form_for([@group, @lecturer]) do |f| %>
+<% form_for([@discipline, @lecturer]) do |f| %>
   <%= f.error_messages %>
 
   <p>
@@ -28,13 +28,14 @@
 <%= label_tag(:labtype, "лабораторные") %> 
   </p>
   <p>
-<%= f.label :Дисциплина %><br />
-  <%= disciplines_select('lecturer[discipline_id]', @group.id) %>
-  </p>
 
+<% @lecturer.discipline_id == @discipline.id %>
+
+  </p>
+<% @group = @discipline.group_id %>
   <p>
     <%= f.submit 'Создать' %>
   </p>
 <% end %>
 
-<%= link_to 'Назад', group_lecturers_path (@group) %>
+<%= link_to 'Назад', discipline_lecturers_path (@discipline) %>

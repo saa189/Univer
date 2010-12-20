@@ -3,11 +3,12 @@
     <tr>
         <th>Номер группы</th>
     </tr>
-      <% @groups.each do |group| %> 
+<% @groups.each do |group| %> 
     <tr>
-       <td><%= link_to '#{group.numb}', group %></td>
+        <td><%=h group.numb %></td>
+       <td><%= link_to 'Показать', group %></td>
        <td><%= link_to 'Изменить', edit_group_path(group) %></td>
        <td><%= link_to 'Удалить', group, :confirm => 'Точно?', :method => :delete %></td>
        </tr> <% end %> </table> 
    <br />
- <%= link_to 'Новая группа', new_group_path %> 
+<p style="color: green"><%= flash[:notice] %> <%= link_to 'Новая группа', new_group_path %> </p>

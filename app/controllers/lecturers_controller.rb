@@ -3,39 +3,39 @@ class LecturersController < ApplicationController
   # GET /lecturers.xml
   def index
     
-    @group = Group.find(params[:group_id])
-    @lecturers = @group.lecturers
+    @discipline = Discipline.find(params[:discipline_id])
+    @lecturers = @discipline.lecturers
   end
 
   # GET /lecturers/1
   # GET /lecturers/1.xml
   def show
-    @group = Group.find(params[:group_id])
-    @lecturer = @group.lecturers.find(params[:id])
+    @discipline = Discipline.find(params[:discipline_id])
+    @lecturer = @discipline.lecturers.find(params[:id])
   end
 
   # GET /lecturers/new
   # GET /lecturers/new.xml
   def new
-    @group = Group.find(params[:group_id])
-    @lecturer = @group.lecturers.build
+    @discipline = Discipline.find(params[:discipline_id])
+    @lecturer = @discipline.lecturers.build
   end
 
   # GET /lecturers/1/edit
   def edit
-    @group = Group.find(params[:group_id])
-    @lecturer = @group.lecturers.find(params[:id])
+    @discipline = Discipline.find(params[:discipline_id])
+    @lecturer = @discipline.lecturers.find(params[:id])
     
   end
 
   # POST /lecturers
   # POST /lecturers.xml
   def create
-    @group = Group.find(params[:group_id])
-    @lecturer = @group.lecturers.build(params[:lecturer])
+    @discipline = Discipline.find(params[:discipline_id])
+    @lecturer = @discipline.lecturers.build(params[:lecturer])
 
       if @lecturer.save
-        redirect_to group_lecturer_url(@group, @lecturer)
+        redirect_to discipline_lecturer_url(@discipline, @lecturer)
     else
       render :action => "new" 
       end
@@ -45,10 +45,10 @@ class LecturersController < ApplicationController
   # PUT /lecturers/1
   # PUT /lecturers/1.xml
   def update
-    @group = Group.find(params[:group_id])
+    @discipline = Discipline.find(params[:discipline_id])
     @lecturer = Lecturer.find(params[:id])
      if @lecturer.update_attributes(params[:lecturer])
-        redirect_to group_lecturer_url(@group, @lecturer)
+        redirect_to discipline_lecturer_url(@discipline, @lecturer)
      else
         render :action => "edit"
      end
@@ -58,12 +58,12 @@ class LecturersController < ApplicationController
   # DELETE /lecturers/1
   # DELETE /lecturers/1.xml
   def destroy
-    @group = Group.find(params[:group_id])
+    @discipline = Discipline.find(params[:discipline_id])
     @lecturer = Lecturer.find(params[:id])
     @lecturer.destroy
 
     respond_to do |format|
-      format.html { redirect_to group_lecturers_path(@lecturer)  }
+      format.html { redirect_to discipline_lecturers_path(@discipline)  }
       format.xml  { head :ok }
     end
  end

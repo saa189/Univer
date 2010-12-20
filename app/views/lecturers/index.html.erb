@@ -1,7 +1,12 @@
-<h1>Преподаватель(и)</h1>
+<h1>Преподаватели по дисциплине <%=h @discipline.name %></h1>
 
 <table>
+  <tr>
+    <th>Фамилия</th>
+    <th>Имя</th>
+    <th>Отчество</th>
 
+  </tr>
 <% for lecturer in @lecturers %>
   <tr>
     
@@ -30,15 +35,16 @@
   <% end %>
 </td>
 
-<td><%= link_to 'Показать', group_lecturer_path (@group, lecturer)  %> </td>
-    <td><%= link_to 'Редактировать', edit_group_lecturer_path (@group, lecturer) %></td>
-    <td><%= link_to 'Удалить', group_lecturer_path (@group, lecturer), :confirm => 'Вы уверены?', :method => :delete %></td>
+    <td><%= link_to 'Редактировать', edit_discipline_lecturer_path (@discipline, lecturer) %></td>
+    <td><%= link_to 'Удалить', discipline_lecturer_path (@discipline, lecturer), :confirm => 'Вы уверены?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
+<% @group = @discipline.group_id %>
+
 <br />
 
- <%= link_to 'Добавить', new_group_lecturer_path(@group) %> |
-<%= link_to 'Назад к списку групп', groups_path  %> 
+ <%= link_to 'Добавить преподавателя', new_discipline_lecturer_path(@discipline) %> |
+<%= link_to 'Назад к списку дисциплин', group_disciplines_path (@group) %> 
 
