@@ -1,19 +1,33 @@
-<p>
- <b>Студент:</b> 
- <%=h @student.name %>
- </p>
+<p align="center">
+  <b>Фамилия: </b>
+  <%=h @student.surname %>
+</p>
+<p align="center">
+  <b>Имя: </b>
+  <%=h @student.name %>
+</p>
+<p align="center">
+  <b>Отчество: </b>
+  <%=h @student.lastname %>
+</p>
 
-<p>
+<p align="center">
  <b>Номер паспорта:</b> 
  <%=h @student.info %>
  </p>
-<p>
+<p align="center">
  <b>Дата рождения:</b> 
- <%=h @student.data %>
+ <%=h @student.bday%>
+/
+ <%=h @student.bmounth%>
+/
+ <%=h @student.byear%> 
  </p>
-<p>
+<p align="center">
  <b>Место рождения:</b> 
  <%=h @student.from %>
  </p>
+<p align="center">
  <%= link_to 'Редактировать', edit_group_student_path(@group, @student) %> |
  <%= link_to 'Назад', group_students_path(@group) %> 
+</p>

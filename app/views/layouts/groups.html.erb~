@@ -1,0 +1,19 @@
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <%= stylesheet_link_tag :all %> 
+  <%= javascript_include_tag :defaults %> 
+<tr align="center">
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Groups: <%= controller.action_name %></title>
+</head>
+
+<body style="background: ##F4FA98;"> 
+<body>
+<p style="color: green"><%= flash[:notice] %></p>
+
+<%= yield %>
+
+</body>
+</html>

@@ -1,13 +1,15 @@
-<h1>Список групп</hq>
-<table>
+
+<h1 align="center">Список групп</hq>
+<table align="center", border = 1>
     <tr>
         <th>Номер группы</th>
+        <th>Дейсвтия</th>
     </tr>
       <% @groups.each do |group| %> 
     <tr>
        <td><%= link_to group.numb, group %></td>
-       <td><%= link_to 'Изменить', edit_group_path(group) %></td>
-       <td><%= link_to 'Удалить', group, :confirm => 'Точно?', :method => :delete %></td>
+       <td><%= link_to 'Изменить', edit_group_path(group) %>
+       <%= link_to 'Удалить', group, :confirm => 'Точно?', :method => :delete %></td>
        </tr> <% end %> </table> 
    <br />
  <%= link_to 'Новая группа', new_group_path %> 

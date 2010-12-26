@@ -1,12 +1,14 @@
-<h1>Редактирование группы</h1>
+<h1 align="center">Редактирование группы</h1>
  <% form_for(@group) do |f| %> 
  <%= f.error_messages %>
- <p>
+ <p align="center">
  <%= f.label :numb %><br />
  <%= f.text_field :numb %>
  </p>
- <p>
- <%= f.submit "Update" %> 
+ <p align="center">
+ <%= f.submit "Обновить" %> 
  </p>
- <% end %> <%= link_to 'Show', @group %> | 
- <%= link_to 'Back', groups_path %> 
+<p align="center">
+ <% end %> <%= link_to 'Показать', @group %> | 
+ <%= link_to 'Назад', groups_path %> 
+<p>

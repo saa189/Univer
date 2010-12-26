@@ -1,4 +1,5 @@
 class Group < ActiveRecord::Base
+validates_uniqueness_of :numb
  validates_presence_of :numb
  has_many :students
  has_many :disciplines

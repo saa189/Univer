@@ -1,12 +1,12 @@
-<h1>Новая группа</h1>
+<h1 align="center">Новая группа</h1>
  <% form_for(@group) do |f| %>
   <%= f.error_messages %> 
 
-  <p>
-    <%= f.label :Номер %><br /> 
+  <p align="center">
+    <%= f.label :Номер_группы %><br /> 
     <%= f.text_field :numb %> 
   </p>
  
-  <p>
+  <p align="center">
      <%= f.submit "Создать" %> 
   </p> <% end %> <%= link_to 'Назад', groups_path %> 

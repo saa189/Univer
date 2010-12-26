@@ -1,9 +1,9 @@
-<h1>Список групп</hq>
-<table>
+<h1 align="center">Список групп</hq>
+<table align="center", border = 1 >
     <tr>
         <th>Номер</th>
     </tr>
-<% for group in @group %>
+<% @groups.each do |group| %> 
     <tr>
         <td><%=h group.numb %></td>
        <td><%= link_to 'Показать', group %></td>

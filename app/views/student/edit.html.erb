@@ -1,18 +1,19 @@
-<h1>Редактирование</h1>
+<h1 align="center">Редактирование</h1>
  <% form_for([@group, @student]) do |f| %> 
  <%= f.error_messages %>
- <p>
+ <p align="center">
  <%= f.label :name %><br />
  <%= f.text_field :name %>
  </p>
- <p>
+ <p align="center">
  <%= f.label :info %><br />
  <%= f.text_field :info %>
  </p>
- <p>
+ <p align="center">
  <%= f.submit "Обновить" %> 
  </p>
  <% end %>
-
+<p align="center">
  <%= link_to 'Показать',group_student_path(@group, @student) %> | 
  <%= link_to 'Назад', group_students_path(@group) %> 
+</p>
