@@ -18413,3 +18413,1125 @@ Processing GroupsController#index (for 127.0.0.1 at 2010-12-26 13:17:47) [GET]
 Rendering template within layouts/groups
 Rendering groups/index
 Completed in 89ms (View: 47, DB: 2) | 200 OK [http://localhost/groups]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-12-26 17:27:48) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Completed in 85ms (View: 83, DB: 0) | 200 OK [http://localhost/main]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-26 17:27:48) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2010-12-26 17:27:50) [GET]
+  [4;36;1mGroup Load (0.9ms)[0m   [0;1mSELECT * FROM "groups" [0m
+Rendering template within layouts/groups
+Rendering groups/index
+Completed in 41ms (View: 24, DB: 1) | 200 OK [http://localhost/groups]
+
+
+Processing GroupsController#show (for 127.0.0.1 at 2010-12-26 17:27:54) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mGroup Load (0.3ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups"."id" = 1) [0m
+Rendering template within layouts/groups
+Rendering groups/show
+  [4;36;1mStudent Load (0.8ms)[0m   [0;1mSELECT * FROM "students" WHERE ("students".group_id = 1) [0m
+Completed in 93ms (View: 84, DB: 1) | 200 OK [http://localhost/groups/1]
+
+
+Processing DisciplinesController#index (for 127.0.0.1 at 2010-12-26 17:28:06) [GET]
+  Parameters: {"group_id"=>"1"}
+  [4;35;1mGroup Load (0.2ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups"."id" = 1) [0m
+Rendering template within layouts/disciplines
+Rendering disciplines/index
+  [4;36;1mDiscipline Load (0.2ms)[0m   [0;1mSELECT * FROM "disciplines" WHERE ("disciplines".group_id = 1) [0m
+Completed in 27ms (View: 15, DB: 0) | 200 OK [http://localhost/groups/1/disciplines]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-26 17:28:06) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing DisciplinesController#new (for 127.0.0.1 at 2010-12-26 17:28:09) [GET]
+  Parameters: {"group_id"=>"1"}
+  [4;35;1mGroup Load (0.2ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups"."id" = 1) [0m
+Rendering template within layouts/disciplines
+Rendering disciplines/new
+Completed in 91ms (View: 10, DB: 0) | 200 OK [http://localhost/groups/1/disciplines/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-26 17:28:09) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing DisciplinesController#index (for 127.0.0.1 at 2010-12-26 17:28:10) [GET]
+  Parameters: {"group_id"=>"1"}
+  [4;36;1mGroup Load (0.2ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups"."id" = 1) [0m
+Rendering template within layouts/disciplines
+Rendering disciplines/index
+  [4;35;1mDiscipline Load (0.3ms)[0m   [0mSELECT * FROM "disciplines" WHERE ("disciplines".group_id = 1) [0m
+Completed in 16ms (View: 3, DB: 0) | 200 OK [http://localhost/groups/1/disciplines]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-26 17:28:10) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2010-12-26 17:28:12) [GET]
+  [4;36;1mGroup Load (0.7ms)[0m   [0;1mSELECT * FROM "groups" [0m
+Rendering template within layouts/groups
+Rendering groups/index
+Completed in 18ms (View: 11, DB: 1) | 200 OK [http://localhost/groups]
+
+
+Processing GroupsController#show (for 127.0.0.1 at 2010-12-26 17:28:37) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mGroup Load (0.2ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups"."id" = 1) [0m
+Rendering template within layouts/groups
+Rendering groups/show
+  [4;36;1mStudent Load (0.7ms)[0m   [0;1mSELECT * FROM "students" WHERE ("students".group_id = 1) [0m
+Completed in 22ms (View: 12, DB: 1) | 200 OK [http://localhost/groups/1]
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2010-12-26 17:28:44) [GET]
+  [4;35;1mGroup Load (0.7ms)[0m   [0mSELECT * FROM "groups" [0m
+Rendering template within layouts/groups
+Rendering groups/index
+Completed in 19ms (View: 11, DB: 1) | 200 OK [http://localhost/groups]
+
+
+Processing GroupsController#show (for 127.0.0.1 at 2010-12-26 17:28:45) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mGroup Load (0.2ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups"."id" = 1) [0m
+Rendering template within layouts/groups
+Rendering groups/show
+  [4;35;1mStudent Load (0.7ms)[0m   [0mSELECT * FROM "students" WHERE ("students".group_id = 1) [0m
+Completed in 22ms (View: 13, DB: 1) | 200 OK [http://localhost/groups/1]
+
+
+Processing DisciplinesController#index (for 127.0.0.1 at 2010-12-26 17:28:46) [GET]
+  Parameters: {"group_id"=>"1"}
+  [4;36;1mGroup Load (0.2ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups"."id" = 1) [0m
+Rendering template within layouts/disciplines
+Rendering disciplines/index
+  [4;35;1mDiscipline Load (0.2ms)[0m   [0mSELECT * FROM "disciplines" WHERE ("disciplines".group_id = 1) [0m
+Completed in 15ms (View: 3, DB: 0) | 200 OK [http://localhost/groups/1/disciplines]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-26 17:28:46) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2010-12-26 17:28:48) [GET]
+  [4;36;1mGroup Load (0.7ms)[0m   [0;1mSELECT * FROM "groups" [0m
+Rendering template within layouts/groups
+Rendering groups/index
+Completed in 20ms (View: 12, DB: 1) | 200 OK [http://localhost/groups]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-12-26 17:30:25) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/main]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-26 17:30:25) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-26 17:30:25) [GET]
+
+ActionController::RoutingError (No route matches "/money-master.jpg" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-12-26 17:30:28) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/main]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-26 17:30:28) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-26 17:30:28) [GET]
+
+ActionController::RoutingError (No route matches "/money-master.jpg" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-12-26 17:32:00) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/main]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-26 17:32:00) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-26 17:32:00) [GET]
+
+ActionController::RoutingError (No route matches "/obrazovanie.jpg" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-12-26 17:32:01) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/main]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-26 17:32:01) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-26 17:32:01) [GET]
+
+ActionController::RoutingError (No route matches "/obrazovanie.jpg" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-12-26 17:32:01) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/main]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-26 17:32:01) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-26 17:32:01) [GET]
+
+ActionController::RoutingError (No route matches "/obrazovanie.jpg" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-12-26 17:32:01) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/main]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-26 17:32:01) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-26 17:32:01) [GET]
+
+ActionController::RoutingError (No route matches "/obrazovanie.jpg" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-12-26 17:32:01) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/main]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-26 17:32:01) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-26 17:32:01) [GET]
+
+ActionController::RoutingError (No route matches "/obrazovanie.jpg" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-12-26 17:32:01) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/main]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-26 17:32:01) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-26 17:32:01) [GET]
+
+ActionController::RoutingError (No route matches "/obrazovanie.jpg" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-12-26 17:37:07) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/main]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-26 17:37:07) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-12-26 17:37:07) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/main]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-26 17:37:07) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-12-26 17:37:08) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/main]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-26 17:37:08) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-12-26 17:37:08) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/main]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-26 17:37:08) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2010-12-26 17:37:08) [GET]
+  [4;35;1mGroup Load (0.7ms)[0m   [0mSELECT * FROM "groups" [0m
+Rendering template within layouts/groups
+Rendering groups/index
+Completed in 18ms (View: 11, DB: 1) | 200 OK [http://localhost/groups]
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2010-12-26 17:47:02) [GET]
+  [4;36;1mGroup Load (0.8ms)[0m   [0;1mSELECT * FROM "groups" [0m
+Rendering template within layouts/groups
+Rendering groups/index
+Completed in 111ms (View: 95, DB: 1) | 200 OK [http://localhost/groups]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-12-27 02:33:14) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Completed in 36ms (View: 34, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-27 02:33:14) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2010-12-27 02:33:17) [GET]
+  [4;36;1mGroup Load (1.0ms)[0m   [0;1mSELECT * FROM "groups" [0m
+Rendering template within layouts/groups
+Rendering groups/index
+Completed in 45ms (View: 26, DB: 1) | 200 OK [http://localhost/groups]
+
+
+Processing GroupsController#edit (for 127.0.0.1 at 2010-12-27 02:33:19) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mGroup Load (0.3ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups"."id" = 1) [0m
+Rendering template within layouts/groups
+Rendering groups/edit
+Completed in 97ms (View: 88, DB: 0) | 200 OK [http://localhost/groups/1/edit]
+
+
+Processing GroupsController#update (for 127.0.0.1 at 2010-12-27 02:33:20) [PUT]
+  Parameters: {"group"=>{"numb"=>"5361"}, "commit"=>"Обновить", "authenticity_token"=>"4mu6FnAgmPI4+2C2oa98Gd97j5sXTXiHAF1dOF+kTMU=", "id"=>"1"}
+  [4;36;1mGroup Load (0.2ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups"."id" = 1) [0m
+  [4;35;1mGroup Load (0.2ms)[0m   [0mSELECT "groups".id FROM "groups" WHERE ("groups"."numb" = '5361' AND "groups".id <> 1) LIMIT 1[0m
+Redirected to http://localhost:3000/groups/1
+Completed in 15ms (DB: 0) | 302 Found [http://localhost/groups/1]
+
+
+Processing GroupsController#show (for 127.0.0.1 at 2010-12-27 02:33:20) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mGroup Load (0.2ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups"."id" = 1) [0m
+Rendering template within layouts/groups
+Rendering groups/show
+  [4;35;1mStudent Load (1.0ms)[0m   [0mSELECT * FROM "students" WHERE ("students".group_id = 1) [0m
+Completed in 43ms (View: 32, DB: 1) | 200 OK [http://localhost/groups/1]
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2010-12-27 02:33:23) [GET]
+  Parameters: {"group_id"=>"1"}
+  [4;36;1mGroup Load (0.3ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups"."id" = 1) [0m
+Rendering template within layouts/students
+Rendering students/index
+  [4;35;1mStudent Load (1.1ms)[0m   [0mSELECT * FROM "students" WHERE ("students".group_id = 1) [0m
+Completed in 60ms (View: 45, DB: 1) | 200 OK [http://localhost/groups/1/students]
+
+
+Processing StudentsController#destroy (for 127.0.0.1 at 2010-12-27 02:33:27) [DELETE]
+  Parameters: {"authenticity_token"=>"4mu6FnAgmPI4+2C2oa98Gd97j5sXTXiHAF1dOF+kTMU=", "group_id"=>"1", "id"=>"3"}
+  [4;36;1mGroup Load (0.3ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups"."id" = 1) [0m
+  [4;35;1mStudent Load (0.4ms)[0m   [0mSELECT * FROM "students" WHERE ("students"."id" = 3) [0m
+  [4;36;1mStudent Destroy (0.4ms)[0m   [0;1mDELETE FROM "students" WHERE "id" = 3[0m
+Redirected to http://localhost:3000/groups/1/students
+Completed in 21ms (DB: 1) | 302 Found [http://localhost/groups/1/students/3]
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2010-12-27 02:33:27) [GET]
+  Parameters: {"group_id"=>"1"}
+  [4;35;1mGroup Load (0.2ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups"."id" = 1) [0m
+Rendering template within layouts/students
+Rendering students/index
+  [4;36;1mStudent Load (0.9ms)[0m   [0;1mSELECT * FROM "students" WHERE ("students".group_id = 1) [0m
+Completed in 41ms (View: 27, DB: 1) | 200 OK [http://localhost/groups/1/students]
+
+
+Processing StudentsController#edit (for 127.0.0.1 at 2010-12-27 02:33:28) [GET]
+  Parameters: {"group_id"=>"1", "id"=>"5"}
+  [4;35;1mGroup Load (0.2ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups"."id" = 1) [0m
+  [4;36;1mStudent Load (0.4ms)[0m   [0;1mSELECT * FROM "students" WHERE ("students"."id" = 5 AND ("students".group_id = 1)) [0m
+Rendering template within layouts/students
+Rendering students/edit
+Completed in 35ms (View: 20, DB: 1) | 200 OK [http://localhost/groups/1/students/5/edit]
+
+
+Processing StudentsController#update (for 127.0.0.1 at 2010-12-27 02:33:34) [PUT]
+  Parameters: {"commit"=>"Обновить", "authenticity_token"=>"4mu6FnAgmPI4+2C2oa98Gd97j5sXTXiHAF1dOF+kTMU=", "group_id"=>"1", "id"=>"5", "student"=>{"name"=>"Сергей", "from"=>"Москва", "bday"=>"1", "info"=>"56887", "lastname"=>"Алексеевич", "bmounth"=>"1", "byear"=>"1991", "surname"=>"Панасюк"}}
+  [4;35;1mGroup Load (0.3ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups"."id" = 1) [0m
+  [4;36;1mStudent Load (0.4ms)[0m   [0;1mSELECT * FROM "students" WHERE ("students"."id" = 5) [0m
+  [4;35;1mStudent Load (0.2ms)[0m   [0mSELECT "students".id FROM "students" WHERE ("students"."info" = '56887' AND "students".id <> 5) LIMIT 1[0m
+  [4;36;1mStudent Update (0.2ms)[0m   [0;1mUPDATE "students" SET "info" = '56887', "updated_at" = '2010-12-26 23:33:34', "bday" = '1', "bmounth" = '1' WHERE "id" = 5[0m
+Redirected to http://localhost:3000/groups/1/students/5
+Completed in 25ms (DB: 1) | 302 Found [http://localhost/groups/1/students/5]
+
+
+Processing StudentsController#show (for 127.0.0.1 at 2010-12-27 02:33:34) [GET]
+  Parameters: {"group_id"=>"1", "id"=>"5"}
+  [4;35;1mGroup Load (0.3ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups"."id" = 1) [0m
+  [4;36;1mStudent Load (0.4ms)[0m   [0;1mSELECT * FROM "students" WHERE ("students"."id" = 5 AND ("students".group_id = 1)) [0m
+Rendering template within layouts/students
+Rendering students/show
+Completed in 27ms (View: 11, DB: 1) | 200 OK [http://localhost/groups/1/students/5]
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2010-12-27 02:33:35) [GET]
+  Parameters: {"group_id"=>"1"}
+  [4;35;1mGroup Load (0.4ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups"."id" = 1) [0m
+Rendering template within layouts/students
+Rendering students/index
+  [4;36;1mStudent Load (0.9ms)[0m   [0;1mSELECT * FROM "students" WHERE ("students".group_id = 1) [0m
+Completed in 116ms (View: 27, DB: 1) | 200 OK [http://localhost/groups/1/students]
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2010-12-27 02:33:36) [GET]
+  [4;35;1mGroup Load (0.8ms)[0m   [0mSELECT * FROM "groups" [0m
+Rendering template within layouts/groups
+Rendering groups/index
+Completed in 20ms (View: 12, DB: 1) | 200 OK [http://localhost/groups]
+
+
+Processing GroupsController#show (for 127.0.0.1 at 2010-12-27 02:33:38) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mGroup Load (0.3ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups"."id" = 1) [0m
+Rendering template within layouts/groups
+Rendering groups/show
+  [4;35;1mStudent Load (0.9ms)[0m   [0mSELECT * FROM "students" WHERE ("students".group_id = 1) [0m
+Completed in 98ms (View: 15, DB: 1) | 200 OK [http://localhost/groups/1]
+
+
+Processing DisciplinesController#index (for 127.0.0.1 at 2010-12-27 02:33:40) [GET]
+  Parameters: {"group_id"=>"1"}
+  [4;36;1mGroup Load (0.3ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups"."id" = 1) [0m
+Rendering template within layouts/disciplines
+Rendering disciplines/index
+  [4;35;1mDiscipline Load (0.5ms)[0m   [0mSELECT * FROM "disciplines" WHERE ("disciplines".group_id = 1) [0m
+Completed in 43ms (View: 28, DB: 1) | 200 OK [http://localhost/groups/1/disciplines]
+
+
+Processing DisciplinesController#new (for 127.0.0.1 at 2010-12-27 02:33:42) [GET]
+  Parameters: {"group_id"=>"1"}
+  [4;36;1mGroup Load (0.3ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups"."id" = 1) [0m
+Rendering template within layouts/disciplines
+Rendering disciplines/new
+Completed in 31ms (View: 13, DB: 0) | 200 OK [http://localhost/groups/1/disciplines/new]
+
+
+Processing DisciplinesController#create (for 127.0.0.1 at 2010-12-27 02:33:47) [POST]
+  Parameters: {"commit"=>"Создать", "authenticity_token"=>"4mu6FnAgmPI4+2C2oa98Gd97j5sXTXiHAF1dOF+kTMU=", "group_id"=>"1", "discipline"=>{"cafedra_name"=>"Информационных систем и технологии", "name"=>"Технологии разработки ПО", "cafedra_number"=>"43"}}
+  [4;35;1mGroup Load (0.3ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups"."id" = 1) [0m
+  [4;36;1mDiscipline Load (0.2ms)[0m   [0;1mSELECT "disciplines".id FROM "disciplines" WHERE ("disciplines"."name" = 'Технологии разработки ПО') LIMIT 1[0m
+Rendering template within layouts/disciplines
+Rendering disciplines/new
+Completed in 31ms (View: 13, DB: 1) | 200 OK [http://localhost/groups/1/disciplines]
+
+
+Processing DisciplinesController#create (for 127.0.0.1 at 2010-12-27 02:33:58) [POST]
+  Parameters: {"commit"=>"Создать", "authenticity_token"=>"4mu6FnAgmPI4+2C2oa98Gd97j5sXTXiHAF1dOF+kTMU=", "group_id"=>"1", "discipline"=>{"cafedra_name"=>"Информационных систем и технологии", "name"=>"Технологии разработки ПОдлд", "cafedra_number"=>"43"}}
+  [4;35;1mGroup Load (0.3ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups"."id" = 1) [0m
+  [4;36;1mDiscipline Load (0.2ms)[0m   [0;1mSELECT "disciplines".id FROM "disciplines" WHERE ("disciplines"."name" = 'Технологии разработки ПОдлд') LIMIT 1[0m
+  [4;35;1mDiscipline Create (0.3ms)[0m   [0mINSERT INTO "disciplines" ("name", "cafedra_name", "created_at", "updated_at", "group_id", "cafedra_number") VALUES('Технологии разработки ПОдлд', 'Информационных систем и технологии', '2010-12-26 23:33:58', '2010-12-26 23:33:58', 1, 43)[0m
+Redirected to http://localhost:3000/groups/1/disciplines/3
+Completed in 28ms (DB: 1) | 302 Found [http://localhost/groups/1/disciplines]
+
+
+Processing DisciplinesController#show (for 127.0.0.1 at 2010-12-27 02:33:58) [GET]
+  Parameters: {"group_id"=>"1", "id"=>"3"}
+  [4;36;1mGroup Load (0.3ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups"."id" = 1) [0m
+  [4;35;1mDiscipline Load (0.3ms)[0m   [0mSELECT * FROM "disciplines" WHERE ("disciplines"."id" = 3 AND ("disciplines".group_id = 1)) [0m
+Rendering template within layouts/disciplines
+Rendering disciplines/show
+  [4;36;1mReporting Load (0.2ms)[0m   [0;1mSELECT * FROM "reportings" WHERE ("reportings".discipline_id = 3) [0m
+  [4;35;1mTeacher Load (0.2ms)[0m   [0mSELECT * FROM "teachers" WHERE ("teachers".discipline_id = 3) [0m
+Completed in 37ms (View: 20, DB: 1) | 200 OK [http://localhost/groups/1/disciplines/3]
+
+
+Processing DisciplinesController#index (for 127.0.0.1 at 2010-12-27 02:34:00) [GET]
+  Parameters: {"group_id"=>"1"}
+  [4;36;1mGroup Load (0.3ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups"."id" = 1) [0m
+Rendering template within layouts/disciplines
+Rendering disciplines/index
+  [4;35;1mDiscipline Load (0.6ms)[0m   [0mSELECT * FROM "disciplines" WHERE ("disciplines".group_id = 1) [0m
+Completed in 38ms (View: 21, DB: 1) | 200 OK [http://localhost/groups/1/disciplines]
+
+
+Processing ReportingsController#index (for 127.0.0.1 at 2010-12-27 02:34:02) [GET]
+  Parameters: {"discipline_id"=>"3"}
+  [4;36;1mDiscipline Load (0.3ms)[0m   [0;1mSELECT * FROM "disciplines" WHERE ("disciplines"."id" = 3) [0m
+Rendering template within layouts/reportings
+Rendering reportings/index
+  [4;35;1mReporting Load (0.3ms)[0m   [0mSELECT * FROM "reportings" WHERE ("reportings".discipline_id = 3) [0m
+Completed in 30ms (View: 17, DB: 1) | 200 OK [http://localhost/disciplines/3/reportings]
+
+
+Processing ReportingsController#new (for 127.0.0.1 at 2010-12-27 02:34:04) [GET]
+  Parameters: {"discipline_id"=>"3"}
+  [4;36;1mDiscipline Load (0.3ms)[0m   [0;1mSELECT * FROM "disciplines" WHERE ("disciplines"."id" = 3) [0m
+Rendering template within layouts/reportings
+Rendering reportings/new
+Completed in 28ms (View: 11, DB: 0) | 200 OK [http://localhost/disciplines/3/reportings/new]
+
+
+Processing ReportingsController#create (for 127.0.0.1 at 2010-12-27 02:34:07) [POST]
+  Parameters: {"commit"=>"Создать", "reporting"=>{"rtype"=>"Экзамен", "rktype"=>"1"}, "authenticity_token"=>"4mu6FnAgmPI4+2C2oa98Gd97j5sXTXiHAF1dOF+kTMU=", "discipline_id"=>"3"}
+  [4;35;1mDiscipline Load (0.3ms)[0m   [0mSELECT * FROM "disciplines" WHERE ("disciplines"."id" = 3) [0m
+  [4;36;1mReporting Create (0.3ms)[0m   [0;1mINSERT INTO "reportings" ("created_at", "rtype", "updated_at", "group_id", "rktype", "discipline_id") VALUES('2010-12-26 23:34:07', 'Экзамен', '2010-12-26 23:34:07', NULL, '1', 3)[0m
+Redirected to http://localhost:3000/disciplines/3/reportings/3
+Completed in 20ms (DB: 1) | 302 Found [http://localhost/disciplines/3/reportings]
+
+
+Processing ReportingsController#show (for 127.0.0.1 at 2010-12-27 02:34:07) [GET]
+  Parameters: {"id"=>"3", "discipline_id"=>"3"}
+  [4;35;1mDiscipline Load (0.3ms)[0m   [0mSELECT * FROM "disciplines" WHERE ("disciplines"."id" = 3) [0m
+  [4;36;1mReporting Load (0.4ms)[0m   [0;1mSELECT * FROM "reportings" WHERE ("reportings"."id" = 3 AND ("reportings".discipline_id = 3)) [0m
+Rendering template within layouts/reportings
+Rendering reportings/show
+Completed in 107ms (View: 13, DB: 1) | 200 OK [http://localhost/disciplines/3/reportings/3]
+
+
+Processing DisciplinesController#index (for 127.0.0.1 at 2010-12-27 02:34:08) [GET]
+  Parameters: {"group_id"=>"1"}
+  [4;35;1mGroup Load (0.2ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups"."id" = 1) [0m
+Rendering template within layouts/disciplines
+Rendering disciplines/index
+  [4;36;1mDiscipline Load (0.6ms)[0m   [0;1mSELECT * FROM "disciplines" WHERE ("disciplines".group_id = 1) [0m
+Completed in 33ms (View: 19, DB: 1) | 200 OK [http://localhost/groups/1/disciplines]
+
+
+Processing TeachersController#index (for 127.0.0.1 at 2010-12-27 02:34:11) [GET]
+  Parameters: {"discipline_id"=>"3"}
+  [4;35;1mDiscipline Load (0.3ms)[0m   [0mSELECT * FROM "disciplines" WHERE ("disciplines"."id" = 3) [0m
+Rendering template within layouts/teachers
+Rendering teachers/index
+  [4;36;1mTeacher Load (0.3ms)[0m   [0;1mSELECT * FROM "teachers" WHERE ("teachers".discipline_id = 3) [0m
+Completed in 34ms (View: 20, DB: 1) | 200 OK [http://localhost/disciplines/3/teachers]
+
+
+Processing TeachersController#new (for 127.0.0.1 at 2010-12-27 02:34:11) [GET]
+  Parameters: {"discipline_id"=>"3"}
+  [4;35;1mDiscipline Load (0.3ms)[0m   [0mSELECT * FROM "disciplines" WHERE ("disciplines"."id" = 3) [0m
+Rendering template within layouts/teachers
+Rendering teachers/new
+Completed in 35ms (View: 17, DB: 0) | 200 OK [http://localhost/disciplines/3/teachers/new]
+
+
+Processing TeachersController#create (for 127.0.0.1 at 2010-12-27 02:34:19) [POST]
+  Parameters: {"commit"=>"Создать", "authenticity_token"=>"4mu6FnAgmPI4+2C2oa98Gd97j5sXTXiHAF1dOF+kTMU=", "teacher"=>{"name"=>"Дмитрий", "title"=>"rthrth", "lastname"=>"Юрьевичd", "stype"=>"1", "labtype"=>"1", "surname"=>"ttryty", "ltype"=>"1"}, "discipline_id"=>"3"}
+  [4;36;1mDiscipline Load (0.3ms)[0m   [0;1mSELECT * FROM "disciplines" WHERE ("disciplines"."id" = 3) [0m
+  [4;35;1mTeacher Create (0.3ms)[0m   [0mINSERT INTO "teachers" ("name", "cafedra_name", "created_at", "title", "updated_at", "lastname", "group_id", "stype", "kontrakt_id", "labtype", "surname", "cafedra_number", "ltype", "discipline_id") VALUES('Дмитрий', NULL, '2010-12-26 23:34:19', 'rthrth', '2010-12-26 23:34:19', 'Юрьевичd', NULL, '1', NULL, '1', 'ttryty', NULL, '1', 3)[0m
+  [4;36;1mContract Create (0.3ms)[0m   [0;1mINSERT INTO "contracts" ("name", "created_at", "medpolis", "updated_at", "lastname", "salary", "pens", "teacher_id", "birthday", "surname", "passport", "inn", "education") VALUES('Дмитрий', '2010-12-26 23:34:19', NULL, '2010-12-26 23:34:19', 'Юрьевичd', NULL, NULL, 5, NULL, 'ttryty', NULL, NULL, NULL)[0m
+Redirected to http://localhost:3000/disciplines/3/teachers/5
+Completed in 36ms (DB: 1) | 302 Found [http://localhost/disciplines/3/teachers]
+
+
+Processing TeachersController#show (for 127.0.0.1 at 2010-12-27 02:34:19) [GET]
+  Parameters: {"id"=>"5", "discipline_id"=>"3"}
+  [4;35;1mDiscipline Load (0.4ms)[0m   [0mSELECT * FROM "disciplines" WHERE ("disciplines"."id" = 3) [0m
+  [4;36;1mTeacher Load (0.5ms)[0m   [0;1mSELECT * FROM "teachers" WHERE ("teachers"."id" = 5 AND ("teachers".discipline_id = 3)) [0m
+Rendering template within layouts/teachers
+Rendering teachers/show
+Completed in 28ms (View: 12, DB: 1) | 200 OK [http://localhost/disciplines/3/teachers/5]
+
+
+Processing TeachersController#index (for 127.0.0.1 at 2010-12-27 02:34:20) [GET]
+  Parameters: {"discipline_id"=>"3"}
+  [4;35;1mDiscipline Load (0.3ms)[0m   [0mSELECT * FROM "disciplines" WHERE ("disciplines"."id" = 3) [0m
+Rendering template within layouts/teachers
+Rendering teachers/index
+  [4;36;1mTeacher Load (0.5ms)[0m   [0;1mSELECT * FROM "teachers" WHERE ("teachers".discipline_id = 3) [0m
+Completed in 31ms (View: 15, DB: 1) | 200 OK [http://localhost/disciplines/3/teachers]
+
+
+Processing TeachersController#show (for 127.0.0.1 at 2010-12-27 02:34:23) [GET]
+  Parameters: {"id"=>"5", "discipline_id"=>"3"}
+  [4;35;1mDiscipline Load (0.3ms)[0m   [0mSELECT * FROM "disciplines" WHERE ("disciplines"."id" = 3) [0m
+  [4;36;1mTeacher Load (0.5ms)[0m   [0;1mSELECT * FROM "teachers" WHERE ("teachers"."id" = 5 AND ("teachers".discipline_id = 3)) [0m
+Rendering template within layouts/teachers
+Rendering teachers/show
+Completed in 24ms (View: 8, DB: 1) | 200 OK [http://localhost/disciplines/3/teachers/5]
+
+
+Processing TeachersController#index (for 127.0.0.1 at 2010-12-27 02:34:24) [GET]
+  Parameters: {"discipline_id"=>"3"}
+  [4;35;1mDiscipline Load (0.3ms)[0m   [0mSELECT * FROM "disciplines" WHERE ("disciplines"."id" = 3) [0m
+Rendering template within layouts/teachers
+Rendering teachers/index
+  [4;36;1mTeacher Load (0.6ms)[0m   [0;1mSELECT * FROM "teachers" WHERE ("teachers".discipline_id = 3) [0m
+Completed in 104ms (View: 15, DB: 1) | 200 OK [http://localhost/disciplines/3/teachers]
+
+
+Processing DisciplinesController#index (for 127.0.0.1 at 2010-12-27 02:34:25) [GET]
+  Parameters: {"group_id"=>"1"}
+  [4;35;1mGroup Load (0.2ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups"."id" = 1) [0m
+Rendering template within layouts/disciplines
+Rendering disciplines/index
+  [4;36;1mDiscipline Load (0.6ms)[0m   [0;1mSELECT * FROM "disciplines" WHERE ("disciplines".group_id = 1) [0m
+Completed in 34ms (View: 19, DB: 1) | 200 OK [http://localhost/groups/1/disciplines]
+
+
+Processing TeachersController#edit (for 127.0.0.1 at 2010-12-27 02:34:29) [GET]
+  Parameters: {"id"=>"5", "discipline_id"=>"3"}
+  [4;35;1mDiscipline Load (0.4ms)[0m   [0mSELECT * FROM "disciplines" WHERE ("disciplines"."id" = 3) [0m
+  [4;36;1mTeacher Load (0.5ms)[0m   [0;1mSELECT * FROM "teachers" WHERE ("teachers"."id" = 5 AND ("teachers".discipline_id = 3)) [0m
+Rendering template within layouts/teachers
+Rendering teachers/edit
+Completed in 40ms (View: 21, DB: 1) | 200 OK [http://localhost/disciplines/3/teachers/5/edit]
+
+
+Processing TeachersController#update (for 127.0.0.1 at 2010-12-27 02:34:33) [PUT]
+  Parameters: {"commit"=>"Сохранить изменения", "authenticity_token"=>"4mu6FnAgmPI4+2C2oa98Gd97j5sXTXiHAF1dOF+kTMU=", "teacher"=>{"name"=>"Дмитрий", "title"=>"rthrth", "lastname"=>"Юрьеви", "stype"=>"1", "labtype"=>"1", "surname"=>"ttryty", "ltype"=>"1"}, "id"=>"5", "discipline_id"=>"3"}
+  [4;35;1mDiscipline Load (0.3ms)[0m   [0mSELECT * FROM "disciplines" WHERE ("disciplines"."id" = 3) [0m
+  [4;36;1mTeacher Load (0.4ms)[0m   [0;1mSELECT * FROM "teachers" WHERE ("teachers"."id" = 5) [0m
+  [4;35;1mTeacher Update (0.3ms)[0m   [0mUPDATE "teachers" SET "lastname" = 'Юрьеви', "updated_at" = '2010-12-26 23:34:33' WHERE "id" = 5[0m
+Redirected to http://localhost:3000/disciplines/3/teachers/5
+Completed in 24ms (DB: 1) | 302 Found [http://localhost/disciplines/3/teachers/5]
+
+
+Processing TeachersController#show (for 127.0.0.1 at 2010-12-27 02:34:33) [GET]
+  Parameters: {"id"=>"5", "discipline_id"=>"3"}
+  [4;36;1mDiscipline Load (0.3ms)[0m   [0;1mSELECT * FROM "disciplines" WHERE ("disciplines"."id" = 3) [0m
+  [4;35;1mTeacher Load (0.5ms)[0m   [0mSELECT * FROM "teachers" WHERE ("teachers"."id" = 5 AND ("teachers".discipline_id = 3)) [0m
+Rendering template within layouts/teachers
+Rendering teachers/show
+Completed in 24ms (View: 8, DB: 1) | 200 OK [http://localhost/disciplines/3/teachers/5]
+
+
+Processing TeachersController#index (for 127.0.0.1 at 2010-12-27 02:34:34) [GET]
+  Parameters: {"discipline_id"=>"3"}
+  [4;36;1mDiscipline Load (0.3ms)[0m   [0;1mSELECT * FROM "disciplines" WHERE ("disciplines"."id" = 3) [0m
+Rendering template within layouts/teachers
+Rendering teachers/index
+  [4;35;1mTeacher Load (0.5ms)[0m   [0mSELECT * FROM "teachers" WHERE ("teachers".discipline_id = 3) [0m
+Completed in 28ms (View: 14, DB: 1) | 200 OK [http://localhost/disciplines/3/teachers]
+
+
+Processing DisciplinesController#index (for 127.0.0.1 at 2010-12-27 02:34:35) [GET]
+  Parameters: {"group_id"=>"1"}
+  [4;36;1mGroup Load (0.2ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups"."id" = 1) [0m
+Rendering template within layouts/disciplines
+Rendering disciplines/index
+  [4;35;1mDiscipline Load (0.6ms)[0m   [0mSELECT * FROM "disciplines" WHERE ("disciplines".group_id = 1) [0m
+Completed in 105ms (View: 92, DB: 1) | 200 OK [http://localhost/groups/1/disciplines]
+
+
+Processing ReportingsController#index (for 127.0.0.1 at 2010-12-27 02:34:39) [GET]
+  Parameters: {"discipline_id"=>"3"}
+  [4;36;1mDiscipline Load (0.3ms)[0m   [0;1mSELECT * FROM "disciplines" WHERE ("disciplines"."id" = 3) [0m
+Rendering template within layouts/reportings
+Rendering reportings/index
+  [4;35;1mReporting Load (0.4ms)[0m   [0mSELECT * FROM "reportings" WHERE ("reportings".discipline_id = 3) [0m
+Completed in 25ms (View: 12, DB: 1) | 200 OK [http://localhost/disciplines/3/reportings]
+
+
+Processing ReportingsController#edit (for 127.0.0.1 at 2010-12-27 02:34:40) [GET]
+  Parameters: {"id"=>"3", "discipline_id"=>"3"}
+  [4;36;1mDiscipline Load (0.3ms)[0m   [0;1mSELECT * FROM "disciplines" WHERE ("disciplines"."id" = 3) [0m
+  [4;35;1mReporting Load (0.4ms)[0m   [0mSELECT * FROM "reportings" WHERE ("reportings"."id" = 3 AND ("reportings".discipline_id = 3)) [0m
+Rendering template within layouts/reportings
+Rendering reportings/edit
+Completed in 103ms (View: 89, DB: 1) | 200 OK [http://localhost/disciplines/3/reportings/3/edit]
+
+
+Processing ReportingsController#edit (for 127.0.0.1 at 2010-12-27 02:34:44) [GET]
+  Parameters: {"id"=>"3", "discipline_id"=>"3"}
+  [4;36;1mDiscipline Load (0.3ms)[0m   [0;1mSELECT * FROM "disciplines" WHERE ("disciplines"."id" = 3) [0m
+  [4;35;1mReporting Load (0.3ms)[0m   [0mSELECT * FROM "reportings" WHERE ("reportings"."id" = 3 AND ("reportings".discipline_id = 3)) [0m
+Rendering template within layouts/reportings
+Rendering reportings/edit
+Completed in 25ms (View: 10, DB: 1) | 200 OK [http://localhost/disciplines/3/reportings/3/edit]
+
+
+Processing ReportingsController#update (for 127.0.0.1 at 2010-12-27 02:34:46) [PUT]
+  Parameters: {"commit"=>"Сохранить изменения", "reporting"=>{"rtype"=>"Экзамен", "rktype"=>"0"}, "authenticity_token"=>"4mu6FnAgmPI4+2C2oa98Gd97j5sXTXiHAF1dOF+kTMU=", "id"=>"3", "discipline_id"=>"3"}
+  [4;36;1mDiscipline Load (0.3ms)[0m   [0;1mSELECT * FROM "disciplines" WHERE ("disciplines"."id" = 3) [0m
+  [4;35;1mReporting Load (0.3ms)[0m   [0mSELECT * FROM "reportings" WHERE ("reportings"."id" = 3) [0m
+  [4;36;1mReporting Update (0.3ms)[0m   [0;1mUPDATE "reportings" SET "updated_at" = '2010-12-26 23:34:46', "rktype" = '0' WHERE "id" = 3[0m
+Redirected to http://localhost:3000/disciplines/3/reportings/3
+Completed in 20ms (DB: 1) | 302 Found [http://localhost/disciplines/3/reportings/3]
+
+
+Processing ReportingsController#show (for 127.0.0.1 at 2010-12-27 02:34:46) [GET]
+  Parameters: {"id"=>"3", "discipline_id"=>"3"}
+  [4;35;1mDiscipline Load (0.3ms)[0m   [0mSELECT * FROM "disciplines" WHERE ("disciplines"."id" = 3) [0m
+  [4;36;1mReporting Load (0.4ms)[0m   [0;1mSELECT * FROM "reportings" WHERE ("reportings"."id" = 3 AND ("reportings".discipline_id = 3)) [0m
+Rendering template within layouts/reportings
+Rendering reportings/show
+Completed in 24ms (View: 7, DB: 1) | 200 OK [http://localhost/disciplines/3/reportings/3]
+
+
+Processing DisciplinesController#index (for 127.0.0.1 at 2010-12-27 02:34:47) [GET]
+  Parameters: {"group_id"=>"1"}
+  [4;35;1mGroup Load (0.2ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups"."id" = 1) [0m
+Rendering template within layouts/disciplines
+Rendering disciplines/index
+  [4;36;1mDiscipline Load (0.6ms)[0m   [0;1mSELECT * FROM "disciplines" WHERE ("disciplines".group_id = 1) [0m
+Completed in 33ms (View: 19, DB: 1) | 200 OK [http://localhost/groups/1/disciplines]
+
+
+Processing DisciplinesController#destroy (for 127.0.0.1 at 2010-12-27 02:35:01) [DELETE]
+  Parameters: {"authenticity_token"=>"4mu6FnAgmPI4+2C2oa98Gd97j5sXTXiHAF1dOF+kTMU=", "group_id"=>"1", "id"=>"3"}
+  [4;35;1mGroup Load (0.3ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups"."id" = 1) [0m
+  [4;36;1mDiscipline Load (0.3ms)[0m   [0;1mSELECT * FROM "disciplines" WHERE ("disciplines"."id" = 3) [0m
+  [4;35;1mDiscipline Destroy (0.2ms)[0m   [0mDELETE FROM "disciplines" WHERE "id" = 3[0m
+Redirected to http://localhost:3000/groups/1/disciplines
+Completed in 21ms (DB: 1) | 302 Found [http://localhost/groups/1/disciplines/3]
+
+
+Processing DisciplinesController#index (for 127.0.0.1 at 2010-12-27 02:35:01) [GET]
+  Parameters: {"group_id"=>"1"}
+  [4;36;1mGroup Load (0.4ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups"."id" = 1) [0m
+Rendering template within layouts/disciplines
+Rendering disciplines/index
+  [4;35;1mDiscipline Load (0.5ms)[0m   [0mSELECT * FROM "disciplines" WHERE ("disciplines".group_id = 1) [0m
+Completed in 32ms (View: 17, DB: 1) | 200 OK [http://localhost/groups/1/disciplines]
+
+
+Processing ContractsController#index (for 127.0.0.1 at 2010-12-27 02:35:02) [GET]
+  [4;36;1mContract Load (1.3ms)[0m   [0;1mSELECT * FROM "contracts" [0m
+Rendering template within layouts/contracts
+Rendering contracts/index
+Completed in 117ms (View: 110, DB: 1) | 200 OK [http://localhost/contracts]
+
+
+Processing ContractsController#show (for 127.0.0.1 at 2010-12-27 02:35:07) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mContract Load (0.4ms)[0m   [0mSELECT * FROM "contracts" WHERE ("contracts"."id" = 5) [0m
+Rendering template within layouts/contracts
+Rendering contracts/show
+Completed in 21ms (View: 12, DB: 0) | 200 OK [http://localhost/contracts/5]
+
+
+Processing ContractsController#show (for 127.0.0.1 at 2010-12-27 02:35:16) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mContract Load (0.4ms)[0m   [0;1mSELECT * FROM "contracts" WHERE ("contracts"."id" = 5) [0m
+Rendering template within layouts/contracts
+Rendering contracts/show
+Completed in 15ms (View: 6, DB: 0) | 200 OK [http://localhost/contracts/5]
+
+
+Processing ContractsController#edit (for 127.0.0.1 at 2010-12-27 02:35:18) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mContract Load (0.7ms)[0m   [0mSELECT * FROM "contracts" WHERE ("contracts"."id" = 5) [0m
+Rendering template within layouts/contracts
+Rendering contracts/edit
+Completed in 28ms (View: 18, DB: 1) | 200 OK [http://localhost/contracts/5/edit]
+
+
+Processing ContractsController#update (for 127.0.0.1 at 2010-12-27 02:35:29) [PUT]
+  Parameters: {"commit"=>"Сохранить изменения", "authenticity_token"=>"4mu6FnAgmPI4+2C2oa98Gd97j5sXTXiHAF1dOF+kTMU=", "id"=>"5", "contract"=>{"medpolis"=>"2313", "salary"=>"240000", "pens"=>"45454545", "birthday"=>"11.11.1980", "inn"=>"3535435", "passport"=>"5454545", "education"=>"высшее"}}
+  [4;36;1mContract Load (0.5ms)[0m   [0;1mSELECT * FROM "contracts" WHERE ("contracts"."id" = 5) [0m
+  [4;35;1mContract Update (0.3ms)[0m   [0mUPDATE "contracts" SET "updated_at" = '2010-12-26 23:35:29', "medpolis" = 2313, "salary" = 240000, "birthday" = '1980-11-11 00:00:00', "pens" = 45454545, "inn" = 3535435, "passport" = 5454545, "education" = 'высшее' WHERE "id" = 5[0m
+Redirected to http://localhost:3000/contracts/5
+Completed in 139ms (DB: 1) | 302 Found [http://localhost/contracts/5]
+
+
+Processing ContractsController#show (for 127.0.0.1 at 2010-12-27 02:35:30) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mContract Load (0.5ms)[0m   [0;1mSELECT * FROM "contracts" WHERE ("contracts"."id" = 5) [0m
+Rendering template within layouts/contracts
+Rendering contracts/show
+Completed in 16ms (View: 7, DB: 0) | 200 OK [http://localhost/contracts/5]
+
+
+Processing ContractsController#destroy (for 127.0.0.1 at 2010-12-27 02:35:35) [DELETE]
+  Parameters: {"authenticity_token"=>"4mu6FnAgmPI4+2C2oa98Gd97j5sXTXiHAF1dOF+kTMU=", "id"=>"5"}
+  [4;35;1mContract Load (0.5ms)[0m   [0mSELECT * FROM "contracts" WHERE ("contracts"."id" = 5) [0m
+  [4;36;1mContract Destroy (0.2ms)[0m   [0;1mDELETE FROM "contracts" WHERE "id" = 5[0m
+  [4;35;1mTeacher Load (0.5ms)[0m   [0mSELECT * FROM "teachers" WHERE (id = 5) LIMIT 1[0m
+  [4;36;1mTeacher Destroy (0.3ms)[0m   [0;1mDELETE FROM "teachers" WHERE "id" = 5[0m
+Redirected to http://localhost:3000/contracts
+Completed in 24ms (DB: 2) | 302 Found [http://localhost/contracts/5]
+
+
+Processing ContractsController#index (for 127.0.0.1 at 2010-12-27 02:35:35) [GET]
+  [4;35;1mContract Load (1.2ms)[0m   [0mSELECT * FROM "contracts" [0m
+Rendering template within layouts/contracts
+Rendering contracts/index
+Completed in 25ms (View: 17, DB: 1) | 200 OK [http://localhost/contracts]
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2010-12-27 02:35:37) [GET]
+  [4;36;1mGroup Load (0.8ms)[0m   [0;1mSELECT * FROM "groups" [0m
+Rendering template within layouts/groups
+Rendering groups/index
+Completed in 22ms (View: 13, DB: 1) | 200 OK [http://localhost/groups]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-12-27 02:35:43) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-27 02:35:43) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)

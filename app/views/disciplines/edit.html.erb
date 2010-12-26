@@ -7,7 +7,14 @@
     <%= f.label :'Название дисциплины' %><br />
     <%= f.text_field :name %>
   </p>
-
+  <p>
+    <%= f.label :'Кафедра' %><br />
+    <%= f.text_field :cafedra_name %>
+  </p>
+  <p>
+    <%= f.label :'Номер кафедры' %><br />
+    <%= f.text_field :cafedra_number %>
+  </p>
   <p>
     <%= f.submit 'Сохранить изменения' %>
   </p>
@@ -15,4 +22,4 @@
 <% end %>
 
 <%= link_to 'Показать', group_discipline_path (@group, @discipline) %> |
-<%= link_to 'Назад', group_disciplines_path (@group) %>
+<a href="javascript:history.back();">Назад</a>

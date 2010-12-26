@@ -3,20 +3,29 @@
 
   <b>Дисциплина:</b>
   <%=h @discipline.name %>
-
+</p>
+<p>
+  <b>Кафедра:</b>
+  <%=h @discipline.cafedra_name %> (<%=h @discipline.cafedra_number %>)
 </p>
 <p>
 <b>Вид отчетности:</b>
-<% @group.reportings.each do |c| %>
+<% @discipline.reportings.each do |c| %>
 <% if c.discipline_id == @discipline.id %>
  <%=h c.rtype %>
+
+  <%if c.rktype == '1' %>
+  <% c.rktype = '  Курсовая работа' %>
+  <%=h c.rktype %>
+  <% end %>
+
 <% end %>
  <% end %> 
  </p> 
 
 
 <b>Преподаватели:</b>
-<% @group.lecturers.each do |l| %>
+<% @discipline.teachers.each do |l| %>
 <p>
 <% if l.discipline_id == @discipline.id %>
  <%=h l.surname %>
@@ -50,7 +59,7 @@
 
 <p>
 </p>
-<%= link_to 'Назад', group_disciplines_path (@group) %> 
+<%= link_to 'К списку дисциплин', group_disciplines_path(@group) %>
 
 
 

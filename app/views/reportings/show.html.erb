@@ -1,9 +1,15 @@
 <p>
   <b>Вид отчетности:</b>
   <%=h @reporting.rtype %>
+
+  <% if @reporting.rktype == '1'  %>
+  <% @reporting.rktype = '  Курсовая работа' %>
+  <%=h @reporting.rktype %>
+  <% end %>
 </p><p>
   <b>Предмет: </b>
   <%=h @discipline.name %> </p>
+<% @group = @discipline.group_id %>
 
 <%= link_to 'Редактировать', edit_discipline_reporting_path(@discipline, @reporting) %> |
-<%= link_to 'Назад', discipline_reportings_path(@discipline) %>
+<%= link_to 'Назад к дисциплинам', group_disciplines_path(@group) %>

@@ -1,13 +1,13 @@
-<h1 align="center">
- <b>Номер группы:</b> 
+<p><h2>
+ Группа 
  <%=h @group.numb %>
- </h1>
+ <h2></p>
 
 
-<h2 align="center">Студенты</h2> 
+<h2>Студенты:</h2> 
 
 
-<table border=1,  align="center">
+<table border=1>
           <% k=0 %>
            <tr>    
                 <th align ="left">№</th>
@@ -26,16 +26,12 @@
            </tr>
        <% end %>      
 </table>
- <br />
 
+<p> 
 
-
-
- <p align="center">
 <%= link_to 'Редактировать группу', edit_group_path(@group) %> |
- <%= link_to 'Назад к списку групп', groups_path %> |
- <%= link_to 'Управление студентами', group_students_path(@group) %>
-</p>
-<p align="center"> 
+<%= link_to 'Назад к списку групп ', groups_path %> |
+ <%= link_to 'Управление студентами', group_students_path(@group) %></p>
+<p> 
  <%= link_to 'Дисциплины', group_disciplines_path (@group) %> 
 </p>

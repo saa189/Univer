@@ -1,8 +1,7 @@
+<h1>Список cтудентов группы <%=h @group.numb %> </h1>
 
-<h1 align="center">Список Студентов группы <%=h @group.numb %> </h1>
-
-<table border=1, align="center">
-        <tr>
+<table border = 1>
+       <tr>
 		<th align="left">Фамилия</th>
 		<th align="left">Имя</th>
                 <th align="left">Отчество</th>
@@ -22,8 +21,5 @@
  <% end %>
  </table> 
    <br />
- <p align="center">
- <%= link_to 'Зачислить студента', new_group_student_path(@group) %> |
- <%= link_to 'Назад к группе', @group %> 
-</p>
-
+ <%= link_to 'Зачислить студента', new_group_student_path(@group) %> 
+<%= link_to 'Назад к списку групп ', groups_path %>

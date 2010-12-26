@@ -1,17 +1,20 @@
-<h1>Виды отчетности по дисциплине <%=h @discipline.name %></h1>
+<h2>Виды отчетности по дисциплине <%=h @discipline.name %></h2>
 
 <table>
-  <tr>
-    <th>Отчетность</th>
 
-  </tr>
 <% for reporting in @reportings %>
-  <tr>
-    <td><%=h reporting.rtype %></td>
-
-    <td><%= link_to 'Редактировать', edit_discipline_reporting_path (@discipline, reporting) %></td>
-    <td><%= link_to 'Удалить', discipline_reporting_path (@discipline, reporting), :confirm => 'Вы уверены?', :method => :delete %></td>
-  </tr>
+<tr><td  align="center">
+<%=h reporting.rtype %>
+</td></tr>
+<tr><td  align="center">
+  <%if reporting.rktype == '1' %>
+  <% reporting.rktype = '  Курсовая работа' %>
+  <%=h reporting.rktype %>
+  <% end %>
+</td></tr><tr><td>
+<%= link_to 'Редактировать', edit_discipline_reporting_path (@discipline, reporting) %>
+    <%= link_to 'Удалить', discipline_reporting_path (@discipline, reporting), :confirm => 'Вы уверены?', :method => :delete %>
+</td></tr>
 <% end %>
 </table>
 
@@ -20,4 +23,4 @@
 <br />
 
  <%= link_to 'Добавить отчетность', new_discipline_reporting_path(@discipline) %> |
-<%= link_to 'Назад к списку дисциплин', group_disciplines_path (@group) %> 
+<a href="javascript:history.back();">Назад</a>

@@ -1,0 +1,29 @@
+
+<p>
+  <b>Фамилия: </b>
+  <%=h @teacher.surname %>
+</p>
+<p>
+  <b>Имя: </b>
+  <%=h @teacher.name %>
+</p>
+<p>
+  <b>Отчество: </b>
+  <%=h @teacher.lastname %>
+</p>
+<p>
+  <b>Звание: </b>
+  <%=h @teacher.title %>
+</p>
+
+<p>
+  <b>Название кафедры: </b>
+  <%=h @discipline.cafedra_name %>
+</p>
+<p>
+  <b>Номер кафедры: </b>
+  <%=h @discipline.cafedra_number %>
+</p>
+
+<%= link_to 'Редактировать', edit_discipline_teacher_path(@discipline, @teacher) %> |
+<%= link_to 'Назад', discipline_teachers_path(@discipline) %> 

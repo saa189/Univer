@@ -1,0 +1,45 @@
+<h1>Редактирование</h1>
+
+<% form_for([@discipline, @teacher]) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :Фамилия %><br />
+    <%= f.text_field :surname %>
+  </p>
+  <p>
+    <%= f.label :Имя %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :Отчество %><br />
+    <%= f.text_field :lastname %>
+  </p>
+  <p>
+    <%= f.label :Звание %><br />
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+<%= f.check_box :ltype %> 
+<%= label_tag(:ltype, "лекции") %> 
+  </p>
+  <p>
+<%= f.check_box :stype %> 
+<%= label_tag(:stype, "семинары") %> 
+  </p>
+  <p>
+<%= f.check_box :labtype %> 
+<%= label_tag(:labtype, "лабораторные") %> 
+  </p>
+  <p>
+<% @teacher.discipline_id == @discipline.id %>
+<% @teacher.cafedra_name == @discipline.cafedra_name %>
+<% @teacher.cafedra_number == @discipline.cafedra_number %>
+  </p>
+  <p>
+    <%= f.submit 'Сохранить изменения' %>
+  </p>
+<% end %>
+
+<a href="javascript:history.back();">Назад</a>

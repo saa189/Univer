@@ -2,10 +2,14 @@
 
 <% form_for([@discipline, @reporting]) do |f| %>
   <%= f.error_messages %>
+<p>
 
+<%= f.select(:rtype, options_for_select([['Экзамен', 'Экзамен'], ['Зачет', 'Зачет']])) %> 
+
+  </p>
   <p>
-    <%= f.label :'Вид отчетности' %><br />
-    <%= f.text_field :rtype %>
+<%= f.check_box :rktype %> 
+<%= label_tag(:rktype, "курсовая работа") %> 
   </p>
   <p>
 <% @reporting.discipline_id == @discipline.id %>
@@ -15,5 +19,4 @@
   </p>
 <% end %>
 
-<%= link_to 'Показать', discipline_reporting_path (@discipline, @reporting) %> |
-<%= link_to 'Назад', discipline_reportings_path (@discipline) %>
+<a href="javascript:history.back();">Назад</a>

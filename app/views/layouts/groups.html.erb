@@ -1,5 +1,3 @@
-
-
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <%= stylesheet_link_tag :all %> 
@@ -9,11 +7,32 @@
   <title>Groups: <%= controller.action_name %></title>
 </head>
 
-<body style="background: #F4FA98;"> 
-<body>
-<p style="color: green"><%= flash[:notice] %></p>
+<body style="background: #FFFFF0;"> 
+		<table width="100%" border="0">
+			<tr align="center" style="background-color: #66CDAA;">
+				<td colspan="3">
+					<div class="users-form"><fieldset><a href="/"><h1>Университет</h1></a></fieldset></div>
+				</td>
+			</tr>
+			<tr valign="top" >
+				<td align="left" >
+					<table align="left" >
 
-<%= yield %>
+						<h3> <a href="/">Об университете</a></h3> 
+ 						<h3> Студентам: </h3>
+                  				<h3> <%= link_to 'Информация об учащихся', groups_path %></h3> 
+                  				<h3> <a href="/">Расписание</a></h3> 
+                  				<h3> <a href="/">Объявления</a></h3> 
+                  				<h3> <%= link_to 'Информация о преподавателях', contracts_path %></h3> 
+                  				<h3> <a href="/">Новости университета</a></h3> 
+					</table>
+				</td>
+				<td align="center" width=100% >
+					<p style="color: green"><%= flash[:notice] %></p>
+					<%= yield %>
+				</td>
 
-</body>
+			</tr>
+		</table>
+	</body>
 </html>

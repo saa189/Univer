@@ -1,17 +1,17 @@
 <h1>Список дисциплин группы <%=h @group.numb %></h1>
 
-<table>
+<table border = 1>
   <tr>
-    <th>Название</th>
+
   </tr>
 
 <% for discipline in @disciplines %>
   <tr>
     <td><%= link_to discipline.name , group_discipline_path (@group, discipline) %></td>
-    <td><%= link_to 'Преподаватели', discipline_lecturers_path(discipline) %></td>
-    <td><%= link_to 'Отчетность', discipline_reportings_path(discipline) %> | </td> 
-    <td><%= link_to 'Редактировать', edit_group_discipline_path (@group, discipline) %></td>
-    <td><%= link_to 'Удалить', group_discipline_path (@group, discipline), :confirm => 'Вы уверены?', :method => :delete %></td>
+    <td><%= link_to 'Преподаватели', discipline_teachers_path(discipline) %> |
+    <%= link_to 'Отчетность', discipline_reportings_path(discipline) %>  </td> 
+    <td><%= link_to 'Редактировать', edit_group_discipline_path (@group, discipline) %> |
+    <%= link_to 'Удалить', group_discipline_path (@group, discipline), :confirm => 'Вы уверены?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
@@ -19,4 +19,4 @@
 
 <br />
 <%= link_to 'Новая дисциплина', new_group_discipline_path (@group) %> |
-<%= link_to 'Назад к списку групп', groups_path %>
+<%= link_to 'Назад', group_path (@group) %>

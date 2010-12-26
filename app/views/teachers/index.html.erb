@@ -1,0 +1,45 @@
+<h2>Преподаватели по дисциплине <%=h @discipline.name %></h2>
+
+<table border = 1>
+
+<% for teacher in @teachers %>
+  <tr>
+    
+    <td><%=h teacher.surname %>
+    <%=h teacher.name %>
+    <%=h teacher.lastname %></td>
+
+<td>
+  <%if teacher.ltype == '1' %>
+  <% teacher.ltype = '  лекции' %>
+  <%=h teacher.ltype %>
+  <% end %>
+
+
+
+  <%if teacher.stype == '1' %>
+  <% teacher.stype = '  семинары' %>
+  <%=h teacher.stype %>
+  <% end %>
+
+
+
+  <%if teacher.labtype == '1' %>
+  <% teacher.labtype = '  лабораторные' %>
+  <%=h teacher.labtype %>
+  <% end %>
+</td>
+    <td><%= link_to 'Подробнее', discipline_teacher_path (@discipline, teacher) %>
+    <%= link_to 'Редактировать', edit_discipline_teacher_path (@discipline, teacher) %>
+    <%= link_to 'Удалить', discipline_teacher_path (@discipline, teacher), :confirm => 'Вы уверены?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<% @group = @discipline.group_id %>
+
+<br />
+
+ <%= link_to 'Добавить преподавателя', new_discipline_teacher_path(@discipline) %> |
+<%= link_to 'Назад', group_disciplines_path(@group) %>
+

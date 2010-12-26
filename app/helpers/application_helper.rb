@@ -6,4 +6,7 @@ module ApplicationHelper
 		select_tag(field, options_for_select(ws))
 	end
 
+        def contract_list(s)
+	        @contract=Contract.find(:first, :conditions =>"id = #{s}")
+	end
 end

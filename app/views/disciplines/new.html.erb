@@ -7,10 +7,17 @@
     <%= f.label :Название %><br />
     <%= f.text_field :name %>
   </p>
-
+  <p>
+    <%= f.label :'Кафедра' %><br />
+    <%= f.text_field :cafedra_name %>
+  </p>
+  <p>
+    <%= f.label :'Номер кафедры' %><br />
+    <%= f.text_field :cafedra_number %>
+  </p>
   <p>
     <%= f.submit 'Создать' %>
   </p>
 <% end %>
 
-<%= link_to 'Назад к списку групп', group_disciplines_path (@group) %>
+<a href="javascript:history.back();">Назад</a>

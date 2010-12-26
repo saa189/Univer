@@ -1,37 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="ru">
-  <head>
-    <title><%= $title %></title>
-      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-      <meta name="keywords" lang="ru" content="<%= $keywords %>" />
-      <meta name="description" lang="ru" content="<%= $description %>" />
-      <%= stylesheet_link_tag 'scaffold' %>
-    </head>
-  <body style="background: #F4FA98;"> 
-  <body>
-  <table width="100%" border="0">
-  <tr align="center">
-  <td colspan="3">
-	<h1>Университет</h1>
-</td>
-</tr>
-<tr>
-<td align="center">
-<h2>
+<head>
+	<title><%= $title %></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      	<meta name="keywords" lang="ru" content="<%= $keywords %>" />
+      	<meta name="description" lang="ru" content="<%= $description %>" />
+      	<%= stylesheet_link_tag 'scaffold' %>
+</head>
+  	<body style="background: #FFFFF0;" > 
+		<table width="100%" border="0">
+			<tr align="center" style="background-color: #66CDAA;">
+				<td colspan="3">
+					<div class="users-form"><fieldset><a href="/"><h1>Университет</h1></a></fieldset></div>
+				</td>
+			</tr>
+			<tr valign="top" >
+				<td align="left" >
+					<table align="left" >
 
- <th>
-<%= link_to 'Группы', groups_path %></h2> 
-</td>
-<td align="center">
-<p style="color: green"><%= flash[:notice] %></p>
-<%= yield %>
-</td>
-<td align="right>
-</td>
-</tr>
-</table>
-</body>
- </html>
+						<h3> <a href="/">Об университете</a></h3> 
+ 						<h3> Студентам: </h3>
+                  				<h3> <%= link_to 'Информация об учащихся', groups_path %></h3> 
+                  				<h3> <a href="/">Расписание</a></h3> 
+                  				<h3> <a href="/">Объявления</a></h3> 
+                  				<h3> <%= link_to 'Информация о преподавателях', contracts_path %></h3> 
+                  				<h3> <a href="/">Новости университета</a></h3> 
+					</table>
+				</td>
+				<td align="center" width=100% >
+					<p style="color: green"> Для просмотра списка групп, а так же студентах, нажмите <%= link_to 'Информация об учащихся', groups_path %></p>
+				<%= yield %>
+				</td>
+			</tr>
 
-
+		</table>
+	</body>
+</html>

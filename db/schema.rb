@@ -9,11 +9,34 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101215132242) do
+ActiveRecord::Schema.define(:version => 20101225115356) do
+
+  create_table "cafedras", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "contracts", :force => true do |t|
+    t.text     "surname"
+    t.text     "name"
+    t.text     "lastname"
+    t.datetime "birthday"
+    t.integer  "passport"
+    t.integer  "medpolis"
+    t.integer  "pens"
+    t.integer  "inn"
+    t.text     "education"
+    t.integer  "salary"
+    t.integer  "teacher_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "disciplines", :force => true do |t|
     t.text     "name"
     t.integer  "group_id"
+    t.text     "cafedra_name"
+    t.integer  "cafedra_number"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -24,21 +47,9 @@ ActiveRecord::Schema.define(:version => 20101215132242) do
     t.datetime "updated_at"
   end
 
-  create_table "lecturers", :force => true do |t|
-    t.text     "surname"
-    t.text     "name"
-    t.text     "lastname"
-    t.text     "ltype"
-    t.text     "stype"
-    t.text     "labtype"
-    t.integer  "discipline_id"
-    t.integer  "group_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "reportings", :force => true do |t|
     t.text     "rtype"
+    t.text     "rktype"
     t.integer  "discipline_id"
     t.integer  "group_id"
     t.datetime "created_at"
@@ -55,6 +66,23 @@ ActiveRecord::Schema.define(:version => 20101215132242) do
     t.string   "byear"
     t.string   "from"
     t.integer  "group_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "teachers", :force => true do |t|
+    t.text     "surname"
+    t.text     "name"
+    t.text     "lastname"
+    t.text     "title"
+    t.text     "cafedra_name"
+    t.integer  "cafedra_number"
+    t.text     "ltype"
+    t.text     "stype"
+    t.text     "labtype"
+    t.integer  "discipline_id"
+    t.integer  "group_id"
+    t.integer  "kontrakt_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,0 +1,49 @@
+<p>
+  <b>Фамилия: </b>
+  <%=h @contract.surname %>
+</p>
+<p>
+  <b>Имя: </b>
+  <%=h @contract.name %>
+</p>
+<p>
+  <b>Отчество: </b>
+  <%=h @contract.lastname %>
+</p>
+<p>
+  <b>Дата рождения: </b>
+  <%=h @contract.birthday %>
+</p>
+<p>
+  <b>Паспорт: </b>
+  <%=h @contract.passport %>
+</p>
+<p>
+  <b>Медицинский полис: </b>
+  <%=h @contract.medpolis %>
+</p>      
+<p>
+  <b>Страховое свидетельство: </b>
+  <%=h @contract.pens %>
+</p> 
+<p>
+  <b>ИНН: </b>
+  <%=h @contract.inn %>
+</p>  
+<p>
+  <b>Образование: </b>
+  <%=h @contract.education %>
+</p>
+<p>
+  <b>Должность:</b>
+    <% k='преподаватель' %>
+    <%=h k %> 
+</p>
+<p>
+  <b>Оклад: </b>
+  <%=h @contract.salary %>
+</p>
+
+
+<%= link_to 'Внести данные', edit_contract_path (@contract) %>
+<a href="javascript:history.back();">Назад</a>

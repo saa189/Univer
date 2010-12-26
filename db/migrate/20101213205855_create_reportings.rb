@@ -1,7 +1,8 @@
 class CreateReportings < ActiveRecord::Migration
   def self.up
     create_table :reportings do |t|
-      t.column :rtype, :text 
+      t.column :rtype, :text
+      t.column :rktype, :text 
       t.column :discipline_id, :integer
       t.column :group_id, :integer
       t.timestamps

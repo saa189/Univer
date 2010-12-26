@@ -1,40 +1,22 @@
-<h1 align="center">
+<p>
  <b>Номер группы:</b> 
  <%=h @group.numb %>
- </h1>
+ </p>
 
+<h2>Студенты</h2> 
+<% @group.students.each do |c| %>
+ <p>
+ <b>Фамилия Имя Отчество:</b>
+ <%=h c.name %>
+ </p> 
 
-<h2 align="center">Студенты</h2> 
-
-
-<table border=1,  align="center">
-          <% k=0 %>
-           <tr>    
-                <th align ="left">№</th>
-		<th align="left">Фамилия</th>
-		<th align="left">Имя</th>
-                <th align="left">Отчество</th>
-            </tr>
-    
-            <% @group.students.each do |c| %>
-            <% k+=1 %>
-            <tr>
-                <td> <%=h k %>         </td> 
-                <td> <%=h c.surname %> </td>
-                <td> <%=h c.name %>    </td> 
-                <td> <%=h c.lastname %></td>
-           </tr>
-       <% end %>      
-</table>
- <br />
-
-
-
+ <p>
+  <b>Краткая информация:</b> 
+   <%=h c.info %>
+   </p>
+ <% end %> 
 
 
 <%= link_to 'Редактировать группу', edit_group_path(@group) %> |
- <%= link_to 'Назад к списку групп', groups_path %> |
- <%= link_to 'Управление студентами', group_students_path(@group) %>
-<p> 
- <%= link_to 'Дисциплины', group_disciplines_path (@group) %> 
-</p>
+ <%= link_to 'Назад к группе', groups_path %> |
+ <%= link_to 'Управление студентами', group_students_path(@group) %> 

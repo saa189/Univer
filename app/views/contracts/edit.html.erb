@@ -1,0 +1,39 @@
+<h1>Редактирование</h1>
+
+<% form_for(@contract) do |f| %>
+  <%= f.error_messages %>
+<%=h @contract.surname %> <%=h @contract.name %> <%=h @contract.lastname %>
+  <p>
+    <%= f.label :'Дата рождения' %><br />
+    <%= f.text_field :birthday %>
+  </p>
+  <p>
+    <%= f.label :Паспорт %><br />
+    <%= f.text_field :passport %>
+  </p>
+  <p>
+    <%= f.label :'Медицинский полис' %><br />
+    <%= f.text_field :medpolis %>
+  </p>
+  <p>
+    <%= f.label :'Страховое свидетельство' %><br />
+    <%= f.text_field :pens %>
+  </p>
+  <p>
+    <%= f.label :ИНН %><br />
+    <%= f.text_field :inn %>
+  </p>
+  <p>
+    <%= f.label :Образование %><br />
+    <%= f.text_field :education %>
+  </p>
+  <p>
+    <%= f.label :Оклад %><br />
+    <%= f.text_field :salary %>
+  </p>
+<p>
+    <%= f.submit 'Сохранить изменения' %>
+  </p>
+<% end %>
+
+<a href="javascript:history.back();">Назад</a>
